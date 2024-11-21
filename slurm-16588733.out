@@ -1,0 +1,524 @@
+[2024-11-21 13:16:02,310] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+W1121 13:16:04.341089 198143 site-packages/torch/distributed/run.py:793] 
+W1121 13:16:04.341089 198143 site-packages/torch/distributed/run.py:793] *****************************************
+W1121 13:16:04.341089 198143 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1121 13:16:04.341089 198143 site-packages/torch/distributed/run.py:793] *****************************************
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/utils/dataclasses.py:1183: UserWarning: DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.
+  warnings.warn("DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/utils/dataclasses.py:1183: UserWarning: DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.
+  warnings.warn("DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/utils/dataclasses.py:1183: UserWarning: DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.
+  warnings.warn("DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/utils/dataclasses.py:1183: UserWarning: DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.
+  warnings.warn("DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/utils/dataclasses.py:1183: UserWarning: DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.
+  warnings.warn("DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/utils/dataclasses.py:1183: UserWarning: DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.
+  warnings.warn("DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/utils/dataclasses.py:1183: UserWarning: DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.
+  warnings.warn("DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/utils/dataclasses.py:1183: UserWarning: DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.
+  warnings.warn("DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.")
+[2024-11-21 13:16:17,445] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-21 13:16:17,446] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-21 13:16:17,521] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-21 13:16:17,522] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-21 13:16:17,549] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-21 13:16:17,549] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-21 13:16:17,549] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-21 13:16:17,550] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-21 13:16:19,300] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-21 13:16:19,306] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-21 13:16:19,307] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-21 13:16:19,307] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-21 13:16:19,310] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-21 13:16:19,313] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-21 13:16:19,314] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-21 13:16:19,314] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-21 13:16:19,314] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+11/21/2024 13:16:19 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 8
+Process index: 0
+Local process index: 0
+Device: cuda:0
+
+Mixed precision type: bf16
+ds_config: {'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'gradient_accumulation_steps': 2, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'nvme_path': None}, 'offload_param': {'device': 'cpu', 'nvme_path': None}, 'stage3_gather_16bit_weights_on_model_save': False}, 'gradient_clipping': 'auto', 'steps_per_print': inf, 'bf16': {'enabled': True}, 'fp16': {'enabled': False}}
+
+DEVICE cuda:0
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/21/2024 13:16:20 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 8
+Process index: 1
+Local process index: 1
+Device: cuda:1
+
+Mixed precision type: bf16
+ds_config: {'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'gradient_accumulation_steps': 2, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'nvme_path': None}, 'offload_param': {'device': 'cpu', 'nvme_path': None}, 'stage3_gather_16bit_weights_on_model_save': False}, 'gradient_clipping': 'auto', 'steps_per_print': inf, 'bf16': {'enabled': True}, 'fp16': {'enabled': False}}
+
+DEVICE cuda:1
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/21/2024 13:16:20 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 8
+Process index: 3
+Local process index: 3
+Device: cuda:3
+
+Mixed precision type: bf16
+ds_config: {'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'gradient_accumulation_steps': 2, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'nvme_path': None}, 'offload_param': {'device': 'cpu', 'nvme_path': None}, 'stage3_gather_16bit_weights_on_model_save': False}, 'gradient_clipping': 'auto', 'steps_per_print': inf, 'bf16': {'enabled': True}, 'fp16': {'enabled': False}}
+
+DEVICE cuda:3
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/21/2024 13:16:20 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 8
+Process index: 5
+Local process index: 5
+Device: cuda:5
+
+Mixed precision type: bf16
+ds_config: {'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'gradient_accumulation_steps': 2, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'nvme_path': None}, 'offload_param': {'device': 'cpu', 'nvme_path': None}, 'stage3_gather_16bit_weights_on_model_save': False}, 'gradient_clipping': 'auto', 'steps_per_print': inf, 'bf16': {'enabled': True}, 'fp16': {'enabled': False}}
+
+DEVICE cuda:5
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/21/2024 13:16:20 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 8
+Process index: 7
+Local process index: 7
+Device: cuda:7
+
+Mixed precision type: bf16
+ds_config: {'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'gradient_accumulation_steps': 2, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'nvme_path': None}, 'offload_param': {'device': 'cpu', 'nvme_path': None}, 'stage3_gather_16bit_weights_on_model_save': False}, 'gradient_clipping': 'auto', 'steps_per_print': inf, 'bf16': {'enabled': True}, 'fp16': {'enabled': False}}
+
+DEVICE cuda:7
+11/21/2024 13:16:20 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 8
+Process index: 6
+Local process index: 6
+Device: cuda:6
+
+Mixed precision type: bf16
+ds_config: {'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'gradient_accumulation_steps': 2, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'nvme_path': None}, 'offload_param': {'device': 'cpu', 'nvme_path': None}, 'stage3_gather_16bit_weights_on_model_save': False}, 'gradient_clipping': 'auto', 'steps_per_print': inf, 'bf16': {'enabled': True}, 'fp16': {'enabled': False}}
+
+DEVICE cuda:6
+11/21/2024 13:16:20 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 8
+Process index: 2
+Local process index: 2
+Device: cuda:2
+
+Mixed precision type: bf16
+ds_config: {'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'gradient_accumulation_steps': 2, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'nvme_path': None}, 'offload_param': {'device': 'cpu', 'nvme_path': None}, 'stage3_gather_16bit_weights_on_model_save': False}, 'gradient_clipping': 'auto', 'steps_per_print': inf, 'bf16': {'enabled': True}, 'fp16': {'enabled': False}}
+
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+DEVICE cuda:2
+11/21/2024 13:16:20 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 8
+Process index: 4
+Local process index: 4
+Device: cuda:4
+
+Mixed precision type: bf16
+ds_config: {'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'gradient_accumulation_steps': 2, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'nvme_path': None}, 'offload_param': {'device': 'cpu', 'nvme_path': None}, 'stage3_gather_16bit_weights_on_model_save': False}, 'gradient_clipping': 'auto', 'steps_per_print': inf, 'bf16': {'enabled': True}, 'fp16': {'enabled': False}}
+
+DEVICE cuda:4
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.75it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.95it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.92it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  5.08it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  5.15it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  5.11it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  5.11it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.59it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.50it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.49it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.49it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.42it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.59it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.51it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.53it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.46it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.49it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.42it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.27it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.15it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.22it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.09it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.49it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.30it/s]
+Init model
+Init model
+Init model
+Init model
+Init model
+Init model
+Init model
+Init model
+Loading checkpoint
+Loading checkpoint
+Loading checkpoint
+Loading checkpoint
+Loading checkpoint
+Loading checkpoint
+Loading checkpoint
+Loading checkpoint
+Init AE
+Init AE
+Init AE
+Init AE
+Init AE
+Init AE
+Init AE
+Init AE
+743.80728 parameters
+743.80728 parameters
+743.80728 parameters
+743.80728 parameters
+743.80728 parameters
+743.80728 parameters
+743.80728 parameters
+743.80728 parameters
+Using /mnt/petrelfs/zhaoshitian/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+Using /mnt/petrelfs/zhaoshitian/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+Using /mnt/petrelfs/zhaoshitian/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+Emitting ninja build file /mnt/petrelfs/zhaoshitian/.cache/torch_extensions/py310_cu121/cpu_adam/build.ninja...
+Building extension module cpu_adam...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+Using /mnt/petrelfs/zhaoshitian/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+Using /mnt/petrelfs/zhaoshitian/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+Using /mnt/petrelfs/zhaoshitian/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+Using /mnt/petrelfs/zhaoshitian/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+Using /mnt/petrelfs/zhaoshitian/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+[1/3] /mnt/petrelfs/share/gcc/gcc-8.5.0/bin/g++ -MMD -MF cpu_adam_impl.o.d -DTORCH_EXTENSION_NAME=cpu_adam -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/csrc/includes -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/TH -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/THC -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -fPIC -std=c++17 -O3 -std=c++17 -g -Wno-reorder -L/mnt/petrelfs/share/test-cuda/cuda-12.1/lib64 -lcudart -lcublas -g -march=native -fopenmp -D__AVX512__ -D__ENABLE_CUDA__ -DBF16_AVAILABLE -c /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/csrc/adam/cpu_adam_impl.cpp -o cpu_adam_impl.o 
+FAILED: cpu_adam_impl.o 
+/mnt/petrelfs/share/gcc/gcc-8.5.0/bin/g++ -MMD -MF cpu_adam_impl.o.d -DTORCH_EXTENSION_NAME=cpu_adam -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/csrc/includes -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/TH -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/THC -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -fPIC -std=c++17 -O3 -std=c++17 -g -Wno-reorder -L/mnt/petrelfs/share/test-cuda/cuda-12.1/lib64 -lcudart -lcublas -g -march=native -fopenmp -D__AVX512__ -D__ENABLE_CUDA__ -DBF16_AVAILABLE -c /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/csrc/adam/cpu_adam_impl.cpp -o cpu_adam_impl.o 
+In file included from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/ATen/core/TensorBase.h:14,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:38,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/ATen/core/Tensor.h:3,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/ATen/Tensor.h:3,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/variable.h:6,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/autograd.h:3,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/csrc/api/include/torch/autograd.h:3,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/csrc/api/include/torch/all.h:7,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/extension.h:5,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/csrc/adam/cpu_adam_impl.cpp:6:
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/c10/util/C++17.h:13:2: error: #error "You're trying to build PyTorch with a too old version of GCC. We need GCC 9 or later."
+ #error \
+  ^~~~~
+[2/3] /mnt/petrelfs/share/gcc/gcc-8.5.0/bin/g++ -MMD -MF cpu_adam.o.d -DTORCH_EXTENSION_NAME=cpu_adam -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/csrc/includes -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/TH -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/THC -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -fPIC -std=c++17 -O3 -std=c++17 -g -Wno-reorder -L/mnt/petrelfs/share/test-cuda/cuda-12.1/lib64 -lcudart -lcublas -g -march=native -fopenmp -D__AVX512__ -D__ENABLE_CUDA__ -DBF16_AVAILABLE -c /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/csrc/adam/cpu_adam.cpp -o cpu_adam.o 
+FAILED: cpu_adam.o 
+/mnt/petrelfs/share/gcc/gcc-8.5.0/bin/g++ -MMD -MF cpu_adam.o.d -DTORCH_EXTENSION_NAME=cpu_adam -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/csrc/includes -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/TH -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/THC -isystem /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -fPIC -std=c++17 -O3 -std=c++17 -g -Wno-reorder -L/mnt/petrelfs/share/test-cuda/cuda-12.1/lib64 -lcudart -lcublas -g -march=native -fopenmp -D__AVX512__ -D__ENABLE_CUDA__ -DBF16_AVAILABLE -c /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/csrc/adam/cpu_adam.cpp -o cpu_adam.o 
+In file included from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/ATen/core/TensorBase.h:14,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:38,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/ATen/core/Tensor.h:3,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/ATen/Tensor.h:3,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/variable.h:6,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/autograd.h:3,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/csrc/api/include/torch/autograd.h:3,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/csrc/api/include/torch/all.h:7,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/torch/extension.h:5,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/csrc/includes/cpu_adam.h:12,
+                 from /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/csrc/adam/cpu_adam.cpp:6:
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/include/c10/util/C++17.h:13:2: error: #error "You're trying to build PyTorch with a too old version of GCC. We need GCC 9 or later."
+ #error \
+  ^~~~~
+ninja: build stopped: subcommand failed.
+Loading extension module cpu_adam...
+Loading extension module cpu_adam...
+Loading extension module cpu_adam...
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 2104, in _run_ninja_build
+[rank3]:     subprocess.run(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/subprocess.py", line 524, in run
+[rank3]:     raise CalledProcessError(retcode, process.args,
+[rank3]: subprocess.CalledProcessError: Command '['ninja', '-v']' returned non-zero exit status 1.
+
+[rank3]: The above exception was the direct cause of the following exception:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank3]:     main()
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 145, in main
+[rank3]:     controlnet, optimizer, _, lr_scheduler = accelerator.prepare(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1323, in prepare
+[rank3]:     result = self._prepare_deepspeed(*args)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1836, in _prepare_deepspeed
+[rank3]:     optimizer = DeepSpeedCPUAdam(optimizer.param_groups, **defaults)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+[rank3]:     self.ds_opt_adam = CPUAdamBuilder().load()
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 531, in load
+[rank3]:     return self.jit_load(verbose)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 578, in jit_load
+[rank3]:     op_module = load(name=self.name,
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1314, in load
+[rank3]:     return _jit_compile(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1721, in _jit_compile
+[rank3]:     _write_ninja_file_and_build_library(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1833, in _write_ninja_file_and_build_library
+[rank3]:     _run_ninja_build(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 2120, in _run_ninja_build
+[rank3]:     raise RuntimeError(message) from e
+[rank3]: RuntimeError: Error building extension 'cpu_adam'
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank5]:     main()
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 145, in main
+[rank5]:     controlnet, optimizer, _, lr_scheduler = accelerator.prepare(
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1323, in prepare
+[rank5]:     result = self._prepare_deepspeed(*args)
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1836, in _prepare_deepspeed
+[rank5]:     optimizer = DeepSpeedCPUAdam(optimizer.param_groups, **defaults)
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+[rank5]:     self.ds_opt_adam = CPUAdamBuilder().load()
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 531, in load
+[rank5]:     return self.jit_load(verbose)
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 578, in jit_load
+[rank5]:     op_module = load(name=self.name,
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1314, in load
+[rank5]:     return _jit_compile(
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1746, in _jit_compile
+[rank5]:     return _import_module_from_library(name, build_directory, is_python_module)
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 2140, in _import_module_from_library
+[rank5]:     module = importlib.util.module_from_spec(spec)
+[rank5]:   File "<frozen importlib._bootstrap>", line 571, in module_from_spec
+[rank5]:   File "<frozen importlib._bootstrap_external>", line 1176, in create_module
+[rank5]:   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+[rank5]: ImportError: /mnt/petrelfs/zhaoshitian/.cache/torch_extensions/py310_cu121/cpu_adam/cpu_adam.so: cannot open shared object file: No such file or directory
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank1]:     main()
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 145, in main
+[rank1]:     controlnet, optimizer, _, lr_scheduler = accelerator.prepare(
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1323, in prepare
+[rank1]:     result = self._prepare_deepspeed(*args)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1836, in _prepare_deepspeed
+[rank1]:     optimizer = DeepSpeedCPUAdam(optimizer.param_groups, **defaults)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+[rank1]:     self.ds_opt_adam = CPUAdamBuilder().load()
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 531, in load
+[rank1]:     return self.jit_load(verbose)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 578, in jit_load
+[rank1]:     op_module = load(name=self.name,
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1314, in load
+[rank1]:     return _jit_compile(
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1746, in _jit_compile
+[rank1]:     return _import_module_from_library(name, build_directory, is_python_module)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 2140, in _import_module_from_library
+[rank1]:     module = importlib.util.module_from_spec(spec)
+[rank1]:   File "<frozen importlib._bootstrap>", line 571, in module_from_spec
+[rank1]:   File "<frozen importlib._bootstrap_external>", line 1176, in create_module
+[rank1]:   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+[rank1]: ImportError: /mnt/petrelfs/zhaoshitian/.cache/torch_extensions/py310_cu121/cpu_adam/cpu_adam.so: cannot open shared object file: No such file or directory
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank2]:     main()
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 145, in main
+[rank2]:     controlnet, optimizer, _, lr_scheduler = accelerator.prepare(
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1323, in prepare
+[rank2]:     result = self._prepare_deepspeed(*args)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1836, in _prepare_deepspeed
+[rank2]:     optimizer = DeepSpeedCPUAdam(optimizer.param_groups, **defaults)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+[rank2]:     self.ds_opt_adam = CPUAdamBuilder().load()
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 531, in load
+[rank2]:     return self.jit_load(verbose)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 578, in jit_load
+[rank2]:     op_module = load(name=self.name,
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1314, in load
+[rank2]:     return _jit_compile(
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1746, in _jit_compile
+[rank2]:     return _import_module_from_library(name, build_directory, is_python_module)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 2140, in _import_module_from_library
+[rank2]:     module = importlib.util.module_from_spec(spec)
+[rank2]:   File "<frozen importlib._bootstrap>", line 571, in module_from_spec
+[rank2]:   File "<frozen importlib._bootstrap_external>", line 1176, in create_module
+[rank2]:   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+[rank2]: ImportError: /mnt/petrelfs/zhaoshitian/.cache/torch_extensions/py310_cu121/cpu_adam/cpu_adam.so: cannot open shared object file: No such file or directory
+Loading extension module cpu_adam...
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank4]:     main()
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 145, in main
+[rank4]:     controlnet, optimizer, _, lr_scheduler = accelerator.prepare(
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1323, in prepare
+[rank4]:     result = self._prepare_deepspeed(*args)
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1836, in _prepare_deepspeed
+[rank4]:     optimizer = DeepSpeedCPUAdam(optimizer.param_groups, **defaults)
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+[rank4]:     self.ds_opt_adam = CPUAdamBuilder().load()
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 531, in load
+[rank4]:     return self.jit_load(verbose)
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 578, in jit_load
+[rank4]:     op_module = load(name=self.name,
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1314, in load
+[rank4]:     return _jit_compile(
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1746, in _jit_compile
+[rank4]:     return _import_module_from_library(name, build_directory, is_python_module)
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 2140, in _import_module_from_library
+[rank4]:     module = importlib.util.module_from_spec(spec)
+[rank4]:   File "<frozen importlib._bootstrap>", line 571, in module_from_spec
+[rank4]:   File "<frozen importlib._bootstrap_external>", line 1176, in create_module
+[rank4]:   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+[rank4]: ImportError: /mnt/petrelfs/zhaoshitian/.cache/torch_extensions/py310_cu121/cpu_adam/cpu_adam.so: cannot open shared object file: No such file or directory
+Loading extension module cpu_adam...
+Loading extension module cpu_adam...
+Loading extension module cpu_adam...
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank6]:     main()
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 145, in main
+[rank6]:     controlnet, optimizer, _, lr_scheduler = accelerator.prepare(
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1323, in prepare
+[rank6]:     result = self._prepare_deepspeed(*args)
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1836, in _prepare_deepspeed
+[rank6]:     optimizer = DeepSpeedCPUAdam(optimizer.param_groups, **defaults)
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+[rank6]:     self.ds_opt_adam = CPUAdamBuilder().load()
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 531, in load
+[rank6]:     return self.jit_load(verbose)
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 578, in jit_load
+[rank6]:     op_module = load(name=self.name,
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1314, in load
+[rank6]:     return _jit_compile(
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1746, in _jit_compile
+[rank6]:     return _import_module_from_library(name, build_directory, is_python_module)
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 2140, in _import_module_from_library
+[rank6]:     module = importlib.util.module_from_spec(spec)
+[rank6]:   File "<frozen importlib._bootstrap>", line 571, in module_from_spec
+[rank6]:   File "<frozen importlib._bootstrap_external>", line 1176, in create_module
+[rank6]:   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+[rank6]: ImportError: /mnt/petrelfs/zhaoshitian/.cache/torch_extensions/py310_cu121/cpu_adam/cpu_adam.so: cannot open shared object file: No such file or directory
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank0]:     main()
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 145, in main
+[rank0]:     controlnet, optimizer, _, lr_scheduler = accelerator.prepare(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1323, in prepare
+[rank0]:     result = self._prepare_deepspeed(*args)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1836, in _prepare_deepspeed
+[rank0]:     optimizer = DeepSpeedCPUAdam(optimizer.param_groups, **defaults)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+[rank0]:     self.ds_opt_adam = CPUAdamBuilder().load()
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 531, in load
+[rank0]:     return self.jit_load(verbose)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 578, in jit_load
+[rank0]:     op_module = load(name=self.name,
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1314, in load
+[rank0]:     return _jit_compile(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1746, in _jit_compile
+[rank0]:     return _import_module_from_library(name, build_directory, is_python_module)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 2140, in _import_module_from_library
+[rank0]:     module = importlib.util.module_from_spec(spec)
+[rank0]:   File "<frozen importlib._bootstrap>", line 571, in module_from_spec
+[rank0]:   File "<frozen importlib._bootstrap_external>", line 1176, in create_module
+[rank0]:   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+[rank0]: ImportError: /mnt/petrelfs/zhaoshitian/.cache/torch_extensions/py310_cu121/cpu_adam/cpu_adam.so: cannot open shared object file: No such file or directory
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank7]:     main()
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 145, in main
+[rank7]:     controlnet, optimizer, _, lr_scheduler = accelerator.prepare(
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1323, in prepare
+[rank7]:     result = self._prepare_deepspeed(*args)
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1836, in _prepare_deepspeed
+[rank7]:     optimizer = DeepSpeedCPUAdam(optimizer.param_groups, **defaults)
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+[rank7]:     self.ds_opt_adam = CPUAdamBuilder().load()
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 531, in load
+[rank7]:     return self.jit_load(verbose)
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 578, in jit_load
+[rank7]:     op_module = load(name=self.name,
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1314, in load
+[rank7]:     return _jit_compile(
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1746, in _jit_compile
+[rank7]:     return _import_module_from_library(name, build_directory, is_python_module)
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 2140, in _import_module_from_library
+[rank7]:     module = importlib.util.module_from_spec(spec)
+[rank7]:   File "<frozen importlib._bootstrap>", line 571, in module_from_spec
+[rank7]:   File "<frozen importlib._bootstrap_external>", line 1176, in create_module
+[rank7]:   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+[rank7]: ImportError: /mnt/petrelfs/zhaoshitian/.cache/torch_extensions/py310_cu121/cpu_adam/cpu_adam.so: cannot open shared object file: No such file or directory
+Exception ignored in: <function DeepSpeedCPUAdam.__del__ at 0x7f46b79b8670>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 102, in __del__
+    self.ds_opt_adam.destroy_adam(self.opt_id)
+AttributeError: 'DeepSpeedCPUAdam' object has no attribute 'ds_opt_adam'
+Exception ignored in: <function DeepSpeedCPUAdam.__del__ at 0x7fb4d84cc670>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 102, in __del__
+    self.ds_opt_adam.destroy_adam(self.opt_id)
+AttributeError: 'DeepSpeedCPUAdam' object has no attribute 'ds_opt_adam'
+Exception ignored in: <function DeepSpeedCPUAdam.__del__ at 0x7f8392004670>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 102, in __del__
+    self.ds_opt_adam.destroy_adam(self.opt_id)
+AttributeError: 'DeepSpeedCPUAdam' object has no attribute 'ds_opt_adam'
+Exception ignored in: <function DeepSpeedCPUAdam.__del__ at 0x7fac16a3c670>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 102, in __del__
+    self.ds_opt_adam.destroy_adam(self.opt_id)
+AttributeError: 'DeepSpeedCPUAdam' object has no attribute 'ds_opt_adam'
+Exception ignored in: <function DeepSpeedCPUAdam.__del__ at 0x7f9084dec670>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 102, in __del__
+    self.ds_opt_adam.destroy_adam(self.opt_id)
+AttributeError: 'DeepSpeedCPUAdam' object has no attribute 'ds_opt_adam'
+Exception ignored in: <function DeepSpeedCPUAdam.__del__ at 0x7f6d220f8670>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 102, in __del__
+    self.ds_opt_adam.destroy_adam(self.opt_id)
+AttributeError: 'DeepSpeedCPUAdam' object has no attribute 'ds_opt_adam'
+Exception ignored in: <function DeepSpeedCPUAdam.__del__ at 0x7f244222c670>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 102, in __del__
+    self.ds_opt_adam.destroy_adam(self.opt_id)
+AttributeError: 'DeepSpeedCPUAdam' object has no attribute 'ds_opt_adam'
+[rank0]:[W1121 13:17:17.468137613 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+Exception ignored in: <function DeepSpeedCPUAdam.__del__ at 0x7fb8535d0670>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 102, in __del__
+AttributeError: 'DeepSpeedCPUAdam' object has no attribute 'ds_opt_adam'
+W1121 13:17:18.413194 198143 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 198918 closing signal SIGTERM
+W1121 13:17:18.416095 198143 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 198919 closing signal SIGTERM
+W1121 13:17:18.416607 198143 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 198920 closing signal SIGTERM
+W1121 13:17:18.417040 198143 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 198922 closing signal SIGTERM
+W1121 13:17:18.417440 198143 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 198926 closing signal SIGTERM
+W1121 13:17:18.418081 198143 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 198928 closing signal SIGTERM
+E1121 13:17:18.846066 198143 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 198917) of binary: /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/python
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1153, in launch_command
+    deepspeed_launcher(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 846, in deepspeed_launcher
+    distrib_run.run(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_flux_deepspeed_controlnet.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2024-11-21_13:17:18
+  host      : SH-IDC1-10-140-1-53
+  rank      : 5 (local_rank: 5)
+  exitcode  : 1 (pid: 198924)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-11-21_13:17:18
+  host      : SH-IDC1-10-140-1-53
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 198917)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: SH-IDC1-10-140-1-53: task 0: Exited with exit code 1

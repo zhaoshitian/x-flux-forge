@@ -1,0 +1,272 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `4`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+11/20/2024 09:24:31 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 0
+Local process index: 0
+Device: cuda:0
+
+Mixed precision type: bf16
+
+DEVICE cuda:0
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 09:24:32 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 3
+Local process index: 3
+Device: cuda:3
+
+Mixed precision type: bf16
+
+DEVICE cuda:3
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 09:24:32 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 2
+Local process index: 2
+Device: cuda:2
+
+Mixed precision type: bf16
+
+DEVICE cuda:2
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 09:24:32 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 1
+Local process index: 1
+Device: cuda:1
+
+Mixed precision type: bf16
+
+DEVICE cuda:1
+Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:  50%|█████     | 1/2 [15:54<15:54, 954.35s/it]Downloading shards: 100%|██████████| 2/2 [43:34<00:00, 1369.78s/it]Downloading shards: 100%|██████████| 2/2 [43:34<00:00, 1307.46s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.35it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.35it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.35it/s]
+Downloading shards:  50%|█████     | 1/2 [48:03<48:03, 2883.34s/it]Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732325082&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMyNTA4Mn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=AF38ewiPcMPYEBVksEhBRq7CXIE89l82rKHGfHNFJJB87WZQXHIFRlZ-qKydbPETcuqNVmvJuQ1wIbhXU6mnjCS0wYW%7EUH%7EUMGwXsbT2EpQnPu9pD%7Edfvs5mpVEVkFA3mPnZBjFsdALvaTaBSUNaArH115D-mGUE0uZg7fIx03AVkstHB5aK5sdJYTUJ2H5a0VDct371Q-Cua0GflopZBePRFUfvNt6T4%7EXZMmAoJ2kCNICwbb2kVgdM9TAD7oXjxsT0HWkcjD0o1wfAT6ymgS%7EGJvlGUk54uz0DoQpXxdg06RDnd1ur352%7EDytXHVwE1n9eHqKVWFv-JbU%7EnJ96qA__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+11/20/2024 10:14:18 - WARNING - huggingface_hub.file_download - Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732325082&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMyNTA4Mn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=AF38ewiPcMPYEBVksEhBRq7CXIE89l82rKHGfHNFJJB87WZQXHIFRlZ-qKydbPETcuqNVmvJuQ1wIbhXU6mnjCS0wYW%7EUH%7EUMGwXsbT2EpQnPu9pD%7Edfvs5mpVEVkFA3mPnZBjFsdALvaTaBSUNaArH115D-mGUE0uZg7fIx03AVkstHB5aK5sdJYTUJ2H5a0VDct371Q-Cua0GflopZBePRFUfvNt6T4%7EXZMmAoJ2kCNICwbb2kVgdM9TAD7oXjxsT0HWkcjD0o1wfAT6ymgS%7EGJvlGUk54uz0DoQpXxdg06RDnd1ur352%7EDytXHVwE1n9eHqKVWFv-JbU%7EnJ96qA__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732325082&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMyNTA4Mn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=AF38ewiPcMPYEBVksEhBRq7CXIE89l82rKHGfHNFJJB87WZQXHIFRlZ-qKydbPETcuqNVmvJuQ1wIbhXU6mnjCS0wYW%7EUH%7EUMGwXsbT2EpQnPu9pD%7Edfvs5mpVEVkFA3mPnZBjFsdALvaTaBSUNaArH115D-mGUE0uZg7fIx03AVkstHB5aK5sdJYTUJ2H5a0VDct371Q-Cua0GflopZBePRFUfvNt6T4%7EXZMmAoJ2kCNICwbb2kVgdM9TAD7oXjxsT0HWkcjD0o1wfAT6ymgS%7EGJvlGUk54uz0DoQpXxdg06RDnd1ur352%7EDytXHVwE1n9eHqKVWFv-JbU%7EnJ96qA__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+11/20/2024 10:16:00 - WARNING - huggingface_hub.file_download - Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732325082&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMyNTA4Mn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=AF38ewiPcMPYEBVksEhBRq7CXIE89l82rKHGfHNFJJB87WZQXHIFRlZ-qKydbPETcuqNVmvJuQ1wIbhXU6mnjCS0wYW%7EUH%7EUMGwXsbT2EpQnPu9pD%7Edfvs5mpVEVkFA3mPnZBjFsdALvaTaBSUNaArH115D-mGUE0uZg7fIx03AVkstHB5aK5sdJYTUJ2H5a0VDct371Q-Cua0GflopZBePRFUfvNt6T4%7EXZMmAoJ2kCNICwbb2kVgdM9TAD7oXjxsT0HWkcjD0o1wfAT6ymgS%7EGJvlGUk54uz0DoQpXxdg06RDnd1ur352%7EDytXHVwE1n9eHqKVWFv-JbU%7EnJ96qA__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+Downloading shards:   0%|          | 0/2 [51:30<?, ?it/s]
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 748, in _error_catcher
+[rank3]:     yield
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 873, in _raw_read
+[rank3]:     data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 856, in _fp_read
+[rank3]:     return self._fp.read(amt) if amt is not None else self._fp.read()
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/http/client.py", line 465, in read
+[rank3]:     s = self.fp.read(amt)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/socket.py", line 705, in readinto
+[rank3]:     return self._sock.recv_into(b)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/ssl.py", line 1273, in recv_into
+[rank3]:     return self.read(nbytes, buffer)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/ssl.py", line 1129, in read
+[rank3]:     return self._sslobj.read(len, buffer)
+[rank3]: TimeoutError: The read operation timed out
+
+[rank3]: The above exception was the direct cause of the following exception:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/requests/models.py", line 820, in generate
+[rank3]:     yield from self.raw.stream(chunk_size, decode_content=True)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 1060, in stream
+[rank3]:     data = self.read(amt=amt, decode_content=decode_content)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 949, in read
+[rank3]:     data = self._raw_read(amt)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 872, in _raw_read
+[rank3]:     with self._error_catcher():
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/contextlib.py", line 153, in __exit__
+[rank3]:     self.gen.throw(typ, value, traceback)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 753, in _error_catcher
+[rank3]:     raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+[rank3]: urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+
+[rank3]: During handling of the above exception, another exception occurred:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 454, in http_get
+[rank3]:     for chunk in r.iter_content(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/requests/models.py", line 826, in generate
+[rank3]:     raise ConnectionError(e)
+[rank3]: requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+
+[rank3]: During handling of the above exception, another exception occurred:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 748, in _error_catcher
+[rank3]:     yield
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 873, in _raw_read
+[rank3]:     data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 856, in _fp_read
+[rank3]:     return self._fp.read(amt) if amt is not None else self._fp.read()
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/http/client.py", line 465, in read
+[rank3]:     s = self.fp.read(amt)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/socket.py", line 705, in readinto
+[rank3]:     return self._sock.recv_into(b)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/ssl.py", line 1273, in recv_into
+[rank3]:     return self.read(nbytes, buffer)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/ssl.py", line 1129, in read
+[rank3]:     return self._sslobj.read(len, buffer)
+[rank3]: TimeoutError: The read operation timed out
+
+[rank3]: The above exception was the direct cause of the following exception:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/requests/models.py", line 820, in generate
+[rank3]:     yield from self.raw.stream(chunk_size, decode_content=True)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 1060, in stream
+[rank3]:     data = self.read(amt=amt, decode_content=decode_content)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 949, in read
+[rank3]:     data = self._raw_read(amt)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 872, in _raw_read
+[rank3]:     with self._error_catcher():
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/contextlib.py", line 153, in __exit__
+[rank3]:     self.gen.throw(typ, value, traceback)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 753, in _error_catcher
+[rank3]:     raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+[rank3]: urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+
+[rank3]: During handling of the above exception, another exception occurred:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 454, in http_get
+[rank3]:     for chunk in r.iter_content(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/requests/models.py", line 826, in generate
+[rank3]:     raise ConnectionError(e)
+[rank3]: requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+
+[rank3]: During handling of the above exception, another exception occurred:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+[rank3]:     response = conn.getresponse()
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/connection.py", line 507, in getresponse
+[rank3]:     httplib_response = super().getresponse()
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/http/client.py", line 1374, in getresponse
+[rank3]:     response.begin()
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/http/client.py", line 318, in begin
+[rank3]:     version, status, reason = self._read_status()
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/http/client.py", line 279, in _read_status
+[rank3]:     line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/socket.py", line 705, in readinto
+[rank3]:     return self._sock.recv_into(b)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/ssl.py", line 1273, in recv_into
+[rank3]:     return self.read(nbytes, buffer)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/ssl.py", line 1129, in read
+[rank3]:     return self._sslobj.read(len, buffer)
+[rank3]: TimeoutError: The read operation timed out
+
+[rank3]: The above exception was the direct cause of the following exception:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+[rank3]:     resp = conn.urlopen(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+[rank3]:     retries = retries.increment(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/util/retry.py", line 474, in increment
+[rank3]:     raise reraise(type(error), error, _stacktrace)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+[rank3]:     raise value
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+[rank3]:     response = self._make_request(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/connectionpool.py", line 538, in _make_request
+[rank3]:     self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/connectionpool.py", line 369, in _raise_timeout
+[rank3]:     raise ReadTimeoutError(
+[rank3]: urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out. (read timeout=10)
+
+[rank3]: During handling of the above exception, another exception occurred:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 317, in <module>
+[rank3]:     main()
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 103, in main
+[rank3]:     dit, vae, t5, clip = get_models(name=args.model_name, device=accelerator.device, offload=False, is_schnell=is_schnell)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 47, in get_models
+[rank3]:     t5 = load_t5(device, max_length=256 if is_schnell else 512)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/util.py", line 365, in load_t5
+[rank3]:     return HFEmbedder("xlabs-ai/xflux_text_encoders", max_length=max_length, torch_dtype=torch.bfloat16, force_download=True).to(device)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/conditioner.py", line 18, in __init__
+[rank3]:     self.hf_module: T5EncoderModel = T5EncoderModel.from_pretrained(version, **hf_kwargs)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3974, in from_pretrained
+[rank3]:     resolved_archive_file, sharded_metadata = get_checkpoint_shard_files(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 1098, in get_checkpoint_shard_files
+[rank3]:     cached_filename = cached_file(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank3]:     resolved_file = hf_hub_download(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank3]:     return fn(*args, **kwargs)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 862, in hf_hub_download
+[rank3]:     return _hf_hub_download_to_cache_dir(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1011, in _hf_hub_download_to_cache_dir
+[rank3]:     _download_to_tmp_and_move(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1545, in _download_to_tmp_and_move
+[rank3]:     http_get(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 471, in http_get
+[rank3]:     return http_get(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 471, in http_get
+[rank3]:     return http_get(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 368, in http_get
+[rank3]:     r = _request_wrapper(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 300, in _request_wrapper
+[rank3]:     response = get_session().request(method=method, url=url, **params)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+[rank3]:     resp = self.send(prep, **send_kwargs)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+[rank3]:     r = adapter.send(request, **kwargs)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 93, in send
+[rank3]:     return super().send(request, *args, **kwargs)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/requests/adapters.py", line 713, in send
+[rank3]:     raise ReadTimeout(e, request=request)
+[rank3]: requests.exceptions.ReadTimeout: (ReadTimeoutError("HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: dffcb80d-21d3-4b07-b980-45357d318105)')
+W1120 10:16:13.669629 427749 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 427906 closing signal SIGTERM
+W1120 10:16:13.672937 427749 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 427907 closing signal SIGTERM
+W1120 10:16:13.673453 427749 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 427908 closing signal SIGTERM
+E1120 10:16:14.151556 427749 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 3 (pid: 427910) of binary: /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/python
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1159, in launch_command
+    multi_gpu_launcher(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 793, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_flux_deepspeed_controlnet.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-11-20_10:16:13
+  host      : SH-IDC1-10-140-0-202
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 427910)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: SH-IDC1-10-140-0-202: task 0: Exited with exit code 1

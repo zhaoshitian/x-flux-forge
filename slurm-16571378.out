@@ -1,0 +1,121 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `4`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+11/19/2024 19:03:06 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 0
+Local process index: 0
+Device: cuda:0
+
+Mixed precision type: bf16
+
+DEVICE cuda:0
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/19/2024 19:03:08 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 1
+Local process index: 1
+Device: cuda:1
+
+Mixed precision type: bf16
+
+DEVICE cuda:1
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/19/2024 19:03:08 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 2
+Local process index: 2
+Device: cuda:2
+
+Mixed precision type: bf16
+
+DEVICE cuda:2
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/19/2024 19:03:08 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 3
+Local process index: 3
+Device: cuda:3
+
+Mixed precision type: bf16
+
+DEVICE cuda:3
+Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [13:49<?, ?it/s]
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 317, in <module>
+[rank0]:     main()
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 103, in main
+[rank0]:     dit, vae, t5, clip = get_models(name=args.model_name, device=accelerator.device, offload=False, is_schnell=is_schnell)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 47, in get_models
+[rank0]:     t5 = load_t5(device, max_length=256 if is_schnell else 512)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/util.py", line 365, in load_t5
+[rank0]:     return HFEmbedder("xlabs-ai/xflux_text_encoders", max_length=max_length, torch_dtype=torch.bfloat16).to(device)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/conditioner.py", line 18, in __init__
+[rank0]:     self.hf_module: T5EncoderModel = T5EncoderModel.from_pretrained(version, **hf_kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3974, in from_pretrained
+[rank0]:     resolved_archive_file, sharded_metadata = get_checkpoint_shard_files(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 1098, in get_checkpoint_shard_files
+[rank0]:     cached_filename = cached_file(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank0]:     resolved_file = hf_hub_download(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 862, in hf_hub_download
+[rank0]:     return _hf_hub_download_to_cache_dir(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1011, in _hf_hub_download_to_cache_dir
+[rank0]:     _download_to_tmp_and_move(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1545, in _download_to_tmp_and_move
+[rank0]:     http_get(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 483, in http_get
+[rank0]:     raise EnvironmentError(
+[rank0]: OSError: Consistency check failed: file should be of size 4994582224 but has size 6010615504 (model-00001-of-00002.safetensors).
+[rank0]: We are sorry for the inconvenience. Please retry with `force_download=True`.
+[rank0]: If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+[rank0]:[W1119 19:16:58.180399724 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W1119 19:16:58.769413 221460 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 221650 closing signal SIGTERM
+W1119 19:16:58.772052 221460 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 221651 closing signal SIGTERM
+W1119 19:16:58.772598 221460 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 221652 closing signal SIGTERM
+E1119 19:16:59.250825 221460 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 221648) of binary: /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/python
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1159, in launch_command
+    multi_gpu_launcher(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 793, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_flux_deepspeed_controlnet.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-11-19_19:16:58
+  host      : SH-IDC1-10-140-1-55
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 221648)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: SH-IDC1-10-140-1-55: task 0: Exited with exit code 1

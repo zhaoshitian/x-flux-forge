@@ -1,0 +1,2 @@
+slurmstepd: error: execve(): accelerate: No such file or directory
+srun: error: SH-IDC1-10-140-0-149: task 0: Exited with exit code 2

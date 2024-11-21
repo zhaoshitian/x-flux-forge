@@ -1,0 +1,179 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `4`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+11/19/2024 20:02:48 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 0
+Local process index: 0
+Device: cuda:0
+
+Mixed precision type: bf16
+
+DEVICE cuda:0
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/19/2024 20:02:49 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 3
+Local process index: 3
+Device: cuda:3
+
+Mixed precision type: bf16
+
+DEVICE cuda:3
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/19/2024 20:02:49 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 2
+Local process index: 2
+Device: cuda:2
+
+Mixed precision type: bf16
+
+DEVICE cuda:2
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/19/2024 20:02:49 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 1
+Local process index: 1
+Device: cuda:1
+
+Mixed precision type: bf16
+
+DEVICE cuda:1
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+[rank0]:     response = conn.getresponse()
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/connection.py", line 507, in getresponse
+[rank0]:     httplib_response = super().getresponse()
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/http/client.py", line 1374, in getresponse
+[rank0]:     response.begin()
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/http/client.py", line 318, in begin
+[rank0]:     version, status, reason = self._read_status()
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/http/client.py", line 279, in _read_status
+[rank0]:     line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/socket.py", line 705, in readinto
+[rank0]:     return self._sock.recv_into(b)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/ssl.py", line 1273, in recv_into
+[rank0]:     return self.read(nbytes, buffer)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/ssl.py", line 1129, in read
+[rank0]:     return self._sslobj.read(len, buffer)
+[rank0]: TimeoutError: The read operation timed out
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+[rank0]:     resp = conn.urlopen(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+[rank0]:     retries = retries.increment(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/util/retry.py", line 474, in increment
+[rank0]:     raise reraise(type(error), error, _stacktrace)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+[rank0]:     raise value
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+[rank0]:     response = self._make_request(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/connectionpool.py", line 538, in _make_request
+[rank0]:     self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/connectionpool.py", line 369, in _raise_timeout
+[rank0]:     raise ReadTimeoutError(
+[rank0]: urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)
+
+[rank0]: During handling of the above exception, another exception occurred:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1376, in _get_metadata_or_catch_error
+[rank0]:     metadata = get_hf_file_metadata(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1296, in get_hf_file_metadata
+[rank0]:     r = _request_wrapper(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 296, in _request_wrapper
+[rank0]:     return _request_wrapper(method=method, url=next_url, follow_relative_redirects=True, **params)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 277, in _request_wrapper
+[rank0]:     response = _request_wrapper(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 300, in _request_wrapper
+[rank0]:     response = get_session().request(method=method, url=url, **params)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+[rank0]:     resp = self.send(prep, **send_kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+[rank0]:     r = adapter.send(request, **kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 93, in send
+[rank0]:     return super().send(request, *args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/requests/adapters.py", line 713, in send
+[rank0]:     raise ReadTimeout(e, request=request)
+[rank0]: requests.exceptions.ReadTimeout: (ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: b9873155-9c73-40bd-bae1-ba1a3e789455)')
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 317, in <module>
+[rank0]:     main()
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 103, in main
+[rank0]:     dit, vae, t5, clip = get_models(name=args.model_name, device=accelerator.device, offload=False, is_schnell=is_schnell)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 47, in get_models
+[rank0]:     t5 = load_t5(device, max_length=256 if is_schnell else 512)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/util.py", line 365, in load_t5
+[rank0]:     return HFEmbedder("xlabs-ai/xflux_text_encoders", max_length=max_length, torch_dtype=torch.bfloat16, force_download=True).to(device)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/conditioner.py", line 18, in __init__
+[rank0]:     self.hf_module: T5EncoderModel = T5EncoderModel.from_pretrained(version, **hf_kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3506, in from_pretrained
+[rank0]:     resolved_config_file = cached_file(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank0]:     resolved_file = hf_hub_download(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 862, in hf_hub_download
+[rank0]:     return _hf_hub_download_to_cache_dir(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 969, in _hf_hub_download_to_cache_dir
+[rank0]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1474, in _raise_on_head_call_error
+[rank0]:     raise ValueError("Force download failed due to the above error.") from head_call_error
+[rank0]: ValueError: Force download failed due to the above error.
+[rank0]:[W1119 20:03:00.773049279 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W1119 20:03:01.061588 98473 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 98585 closing signal SIGTERM
+W1119 20:03:01.063185 98473 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 98586 closing signal SIGTERM
+W1119 20:03:01.064014 98473 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 98587 closing signal SIGTERM
+E1119 20:03:01.481320 98473 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 98584) of binary: /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/python
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1159, in launch_command
+    multi_gpu_launcher(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 793, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_flux_deepspeed_controlnet.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-11-19_20:03:01
+  host      : SH-IDC1-10-140-1-65
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 98584)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: SH-IDC1-10-140-1-65: task 0: Exited with exit code 1

@@ -1,0 +1,218 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `4`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+11/20/2024 19:28:36 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 0
+Local process index: 0
+Device: cuda:0
+
+Mixed precision type: bf16
+
+DEVICE cuda:0
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 19:28:37 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 3
+Local process index: 3
+Device: cuda:3
+
+Mixed precision type: bf16
+
+DEVICE cuda:3
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 19:28:37 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 2
+Local process index: 2
+Device: cuda:2
+
+Mixed precision type: bf16
+
+DEVICE cuda:2
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 19:28:37 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 1
+Local process index: 1
+Device: cuda:1
+
+Mixed precision type: bf16
+
+DEVICE cuda:1
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.18it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.33it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.31it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  5.46it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  5.46it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  5.47it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  6.14it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  6.03it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  6.16it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  6.04it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  6.18it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  6.06it/s]
+Init model
+Init model
+Init model
+Init model
+Loading checkpoint
+Loading checkpoint
+Loading checkpoint
+Loading checkpoint
+Init AE
+Init AE
+Init AE
+Init AE
+743.80728 parameters
+743.80728 parameters
+743.80728 parameters
+743.80728 parameters
+11/20/2024 19:29:05 - INFO - __main__ - ***** Running training *****
+11/20/2024 19:29:05 - INFO - __main__ -   Num Epochs = 9
+11/20/2024 19:29:05 - INFO - __main__ -   Instantaneous batch size per device = 3
+11/20/2024 19:29:05 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 24
+11/20/2024 19:29:05 - INFO - __main__ -   Gradient Accumulation steps = 2
+11/20/2024 19:29:05 - INFO - __main__ -   Total optimization steps = 100000
+Checkpoint 'latest' does not exist. Starting a new training run.
+torch.Size([4]) torch.Size([4, 1536, 64]) torch.Size([4, 1536, 64])
+torch.Size([4]) torch.Size([4, 1536, 64]) torch.Size([4, 1536, 64])
+torch.Size([4]) torch.Size([4, 1536, 64]) torch.Size([4, 1536, 64])
+torch.Size([4]) torch.Size([4, 1536, 64]) torch.Size([4, 1536, 64])
+Steps:   0%|          | 0/100000 [00:00<?, ?it/s][rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank0]:     main()
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 240, in main
+[rank0]:     model_pred = dit(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/model.py", line 224, in forward
+[rank0]:     img = block(img, vec=vec, pe=pe)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/layers.py", line 555, in forward
+[rank0]:     return self.processor(self, x, vec, pe)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/layers.py", line 496, in __call__
+[rank0]:     attn_1 = attention(q, k, v, pe=pe)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/math.py", line 7, in attention
+[rank0]:     q, k = apply_rope(q, k, pe)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/math.py", line 28, in apply_rope
+[rank0]:     xq_out = freqs_cis[..., 0] * xq_[..., 0] + freqs_cis[..., 1] * xq_[..., 1]
+[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 96.00 MiB. GPU 0 has a total capacity of 79.32 GiB of which 87.56 MiB is free. Including non-PyTorch memory, this process has 79.24 GiB memory in use. Of the allocated memory 76.44 GiB is allocated by PyTorch, and 347.78 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank1]:     main()
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 240, in main
+[rank1]:     model_pred = dit(
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/model.py", line 224, in forward
+[rank1]:     img = block(img, vec=vec, pe=pe)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/layers.py", line 555, in forward
+[rank1]:     return self.processor(self, x, vec, pe)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/layers.py", line 496, in __call__
+[rank1]:     attn_1 = attention(q, k, v, pe=pe)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/math.py", line 7, in attention
+[rank1]:     q, k = apply_rope(q, k, pe)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/math.py", line 28, in apply_rope
+[rank1]:     xq_out = freqs_cis[..., 0] * xq_[..., 0] + freqs_cis[..., 1] * xq_[..., 1]
+[rank1]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 96.00 MiB. GPU 1 has a total capacity of 79.32 GiB of which 39.56 MiB is free. Including non-PyTorch memory, this process has 79.28 GiB memory in use. Of the allocated memory 76.25 GiB is allocated by PyTorch, and 443.78 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank2]:     main()
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 240, in main
+[rank2]:     model_pred = dit(
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/model.py", line 224, in forward
+[rank2]:     img = block(img, vec=vec, pe=pe)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/layers.py", line 555, in forward
+[rank2]:     return self.processor(self, x, vec, pe)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/layers.py", line 496, in __call__
+[rank2]:     attn_1 = attention(q, k, v, pe=pe)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/math.py", line 7, in attention
+[rank2]:     q, k = apply_rope(q, k, pe)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/math.py", line 28, in apply_rope
+[rank2]:     xq_out = freqs_cis[..., 0] * xq_[..., 0] + freqs_cis[..., 1] * xq_[..., 1]
+[rank2]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 96.00 MiB. GPU 2 has a total capacity of 79.32 GiB of which 39.56 MiB is free. Including non-PyTorch memory, this process has 79.28 GiB memory in use. Of the allocated memory 76.25 GiB is allocated by PyTorch, and 443.78 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank3]:     main()
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 240, in main
+[rank3]:     model_pred = dit(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/model.py", line 224, in forward
+[rank3]:     img = block(img, vec=vec, pe=pe)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/layers.py", line 555, in forward
+[rank3]:     return self.processor(self, x, vec, pe)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/layers.py", line 496, in __call__
+[rank3]:     attn_1 = attention(q, k, v, pe=pe)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/math.py", line 7, in attention
+[rank3]:     q, k = apply_rope(q, k, pe)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/math.py", line 28, in apply_rope
+[rank3]:     xq_out = freqs_cis[..., 0] * xq_[..., 0] + freqs_cis[..., 1] * xq_[..., 1]
+[rank3]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 96.00 MiB. GPU 3 has a total capacity of 79.32 GiB of which 87.56 MiB is free. Including non-PyTorch memory, this process has 79.24 GiB memory in use. Of the allocated memory 76.34 GiB is allocated by PyTorch, and 443.78 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Steps:   0%|          | 0/100000 [00:04<?, ?it/s]
+[rank0]:[W1120 19:29:10.235450797 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W1120 19:29:12.212109 315056 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 315408 closing signal SIGTERM
+W1120 19:29:12.215120 315056 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 315410 closing signal SIGTERM
+W1120 19:29:12.215581 315056 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 315411 closing signal SIGTERM
+E1120 19:29:12.830807 315056 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 1 (pid: 315409) of binary: /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/python
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1159, in launch_command
+    multi_gpu_launcher(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 793, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_flux_deepspeed_controlnet.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-11-20_19:29:12
+  host      : SH-IDC1-10-140-0-163
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 315409)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: SH-IDC1-10-140-0-163: task 0: Exited with exit code 1

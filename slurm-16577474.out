@@ -1,0 +1,151 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `4`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+11/20/2024 01:54:18 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 0
+Local process index: 0
+Device: cuda:0
+
+Mixed precision type: bf16
+
+DEVICE cuda:0
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 01:54:20 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 2
+Local process index: 2
+Device: cuda:2
+
+Mixed precision type: bf16
+
+DEVICE cuda:2
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 01:54:20 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 3
+Local process index: 3
+Device: cuda:3
+
+Mixed precision type: bf16
+
+DEVICE cuda:3
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 01:54:20 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 1
+Local process index: 1
+Device: cuda:1
+
+Mixed precision type: bf16
+
+DEVICE cuda:1
+Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:  50%|█████     | 1/2 [15:54<15:54, 954.72s/it]Downloading shards:  50%|█████     | 1/2 [31:19<31:19, 1879.36s/it]
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 748, in _error_catcher
+[rank0]:     yield
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 894, in _raw_read
+[rank0]:     raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+[rank0]: urllib3.exceptions.IncompleteRead: IncompleteRead(2599300442 bytes read, 1930765918 more expected)
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/requests/models.py", line 820, in generate
+[rank0]:     yield from self.raw.stream(chunk_size, decode_content=True)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 1060, in stream
+[rank0]:     data = self.read(amt=amt, decode_content=decode_content)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 977, in read
+[rank0]:     data = self._raw_read(amt)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 872, in _raw_read
+[rank0]:     with self._error_catcher():
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/contextlib.py", line 153, in __exit__
+[rank0]:     self.gen.throw(typ, value, traceback)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/urllib3/response.py", line 772, in _error_catcher
+[rank0]:     raise ProtocolError(arg, e) from e
+[rank0]: urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(2599300442 bytes read, 1930765918 more expected)', IncompleteRead(2599300442 bytes read, 1930765918 more expected))
+
+[rank0]: During handling of the above exception, another exception occurred:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 317, in <module>
+[rank0]:     main()
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 103, in main
+[rank0]:     dit, vae, t5, clip = get_models(name=args.model_name, device=accelerator.device, offload=False, is_schnell=is_schnell)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 47, in get_models
+[rank0]:     t5 = load_t5(device, max_length=256 if is_schnell else 512)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/util.py", line 365, in load_t5
+[rank0]:     return HFEmbedder("xlabs-ai/xflux_text_encoders", max_length=max_length, torch_dtype=torch.bfloat16, force_download=True).to(device)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/conditioner.py", line 18, in __init__
+[rank0]:     self.hf_module: T5EncoderModel = T5EncoderModel.from_pretrained(version, **hf_kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3974, in from_pretrained
+[rank0]:     resolved_archive_file, sharded_metadata = get_checkpoint_shard_files(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 1098, in get_checkpoint_shard_files
+[rank0]:     cached_filename = cached_file(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank0]:     resolved_file = hf_hub_download(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 862, in hf_hub_download
+[rank0]:     return _hf_hub_download_to_cache_dir(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1011, in _hf_hub_download_to_cache_dir
+[rank0]:     _download_to_tmp_and_move(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1545, in _download_to_tmp_and_move
+[rank0]:     http_get(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 454, in http_get
+[rank0]:     for chunk in r.iter_content(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/requests/models.py", line 822, in generate
+[rank0]:     raise ChunkedEncodingError(e)
+[rank0]: requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(2599300442 bytes read, 1930765918 more expected)', IncompleteRead(2599300442 bytes read, 1930765918 more expected))
+[rank0]:[W1120 02:25:42.533285239 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732298064&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjI5ODA2NH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=gpVdtF4CRyC73WP21IMcf2RaGFbeW91SMV3HrtYaFO55S831gG16pgNrn7g6venVKc7ot4RJ6yydPjf0aYvBjtm-ZEL1sExStUJVcPvCNcojdbCP-m-28HVXJSoz01aMS%7EPWexxjoSvDEI2JSpSLWu68FGRzj7upcmLyYOzbSvLOVoKrQa0cYSxmFnTwEOAiu1XNFlheUCAZ3UeFJPCZZ2nJZqvKAESxwkWTHNb7khWby7dpSP%7EqSUy6RUekaPdKUSZBosCO39XYJuVn6WZeA4f-rYC%7EJZk3q5b6k9ZHZyiH1Z%7E-6QWYj03Hk4mgYC4k5TVt-ZIu2tLWdSozEAHycw__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+11/20/2024 02:25:42 - WARNING - huggingface_hub.file_download - Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732298064&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjI5ODA2NH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=gpVdtF4CRyC73WP21IMcf2RaGFbeW91SMV3HrtYaFO55S831gG16pgNrn7g6venVKc7ot4RJ6yydPjf0aYvBjtm-ZEL1sExStUJVcPvCNcojdbCP-m-28HVXJSoz01aMS%7EPWexxjoSvDEI2JSpSLWu68FGRzj7upcmLyYOzbSvLOVoKrQa0cYSxmFnTwEOAiu1XNFlheUCAZ3UeFJPCZZ2nJZqvKAESxwkWTHNb7khWby7dpSP%7EqSUy6RUekaPdKUSZBosCO39XYJuVn6WZeA4f-rYC%7EJZk3q5b6k9ZHZyiH1Z%7E-6QWYj03Hk4mgYC4k5TVt-ZIu2tLWdSozEAHycw__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+W1120 02:25:43.746350 325505 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 326288 closing signal SIGTERM
+W1120 02:25:43.748974 325505 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 326289 closing signal SIGTERM
+W1120 02:25:43.749623 325505 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 326290 closing signal SIGTERM
+E1120 02:25:44.164286 325505 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 326286) of binary: /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/python
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1159, in launch_command
+    multi_gpu_launcher(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 793, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_flux_deepspeed_controlnet.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-11-20_02:25:43
+  host      : SH-IDC1-10-140-1-5
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 326286)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: SH-IDC1-10-140-1-5: task 0: Exited with exit code 1

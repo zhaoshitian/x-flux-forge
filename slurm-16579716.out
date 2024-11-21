@@ -1,0 +1,175 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `4`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+11/20/2024 11:29:45 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 0
+Local process index: 0
+Device: cuda:0
+
+Mixed precision type: bf16
+
+DEVICE cuda:0
+Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 11:29:50 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 1
+Local process index: 1
+Device: cuda:1
+
+Mixed precision type: bf16
+
+DEVICE cuda:1
+11/20/2024 11:29:50 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 3
+Local process index: 3
+Device: cuda:3
+
+Mixed precision type: bf16
+
+DEVICE cuda:3
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 11:29:50 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 2
+Local process index: 2
+Device: cuda:2
+
+Mixed precision type: bf16
+
+DEVICE cuda:2
+Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:  50%|█████     | 1/2 [32:03<32:03, 1923.52s/it]Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732331518&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMzMTUxOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=EXNBuhv3shpFCidvTHMteCcp9NmKFYmla6%7E90o4mmB2ZIWUdvkiz4EWHrLL%7Eh0PY%7Enmt5imvESxikri9bCcJHQbhC3yFPF7F%7E7hFlJOxxgNU2x%7EU0%7EzkRxwtPJn2hhvmR5ekAwcRo3v2sNDfBkFJk%7ESAr4rn%7EvHhQKAsyQzIMIF-uUgAwDLsDIgSRedtVoKUyIlVGW3VbLvLvn7ulSx8WA3ROuNFrjIzXkKZN1JPQuzLRYRpYqqila2schHJDtOuSYKkF-dL2%7Ed6Gs6-406D75PRCA3IyuXaKz9KI91LsG016NeHqGdq1ZD8fYDHg8ZSbaCrOG7AQu0DS-xBuJXatw__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+11/20/2024 12:12:34 - WARNING - huggingface_hub.file_download - Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732331518&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMzMTUxOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=EXNBuhv3shpFCidvTHMteCcp9NmKFYmla6%7E90o4mmB2ZIWUdvkiz4EWHrLL%7Eh0PY%7Enmt5imvESxikri9bCcJHQbhC3yFPF7F%7E7hFlJOxxgNU2x%7EU0%7EzkRxwtPJn2hhvmR5ekAwcRo3v2sNDfBkFJk%7ESAr4rn%7EvHhQKAsyQzIMIF-uUgAwDLsDIgSRedtVoKUyIlVGW3VbLvLvn7ulSx8WA3ROuNFrjIzXkKZN1JPQuzLRYRpYqqila2schHJDtOuSYKkF-dL2%7Ed6Gs6-406D75PRCA3IyuXaKz9KI91LsG016NeHqGdq1ZD8fYDHg8ZSbaCrOG7AQu0DS-xBuJXatw__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732331518&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMzMTUxOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=EXNBuhv3shpFCidvTHMteCcp9NmKFYmla6%7E90o4mmB2ZIWUdvkiz4EWHrLL%7Eh0PY%7Enmt5imvESxikri9bCcJHQbhC3yFPF7F%7E7hFlJOxxgNU2x%7EU0%7EzkRxwtPJn2hhvmR5ekAwcRo3v2sNDfBkFJk%7ESAr4rn%7EvHhQKAsyQzIMIF-uUgAwDLsDIgSRedtVoKUyIlVGW3VbLvLvn7ulSx8WA3ROuNFrjIzXkKZN1JPQuzLRYRpYqqila2schHJDtOuSYKkF-dL2%7Ed6Gs6-406D75PRCA3IyuXaKz9KI91LsG016NeHqGdq1ZD8fYDHg8ZSbaCrOG7AQu0DS-xBuJXatw__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+11/20/2024 12:20:17 - WARNING - huggingface_hub.file_download - Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732331518&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMzMTUxOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=EXNBuhv3shpFCidvTHMteCcp9NmKFYmla6%7E90o4mmB2ZIWUdvkiz4EWHrLL%7Eh0PY%7Enmt5imvESxikri9bCcJHQbhC3yFPF7F%7E7hFlJOxxgNU2x%7EU0%7EzkRxwtPJn2hhvmR5ekAwcRo3v2sNDfBkFJk%7ESAr4rn%7EvHhQKAsyQzIMIF-uUgAwDLsDIgSRedtVoKUyIlVGW3VbLvLvn7ulSx8WA3ROuNFrjIzXkKZN1JPQuzLRYRpYqqila2schHJDtOuSYKkF-dL2%7Ed6Gs6-406D75PRCA3IyuXaKz9KI91LsG016NeHqGdq1ZD8fYDHg8ZSbaCrOG7AQu0DS-xBuJXatw__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732331518&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMzMTUxOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=EXNBuhv3shpFCidvTHMteCcp9NmKFYmla6%7E90o4mmB2ZIWUdvkiz4EWHrLL%7Eh0PY%7Enmt5imvESxikri9bCcJHQbhC3yFPF7F%7E7hFlJOxxgNU2x%7EU0%7EzkRxwtPJn2hhvmR5ekAwcRo3v2sNDfBkFJk%7ESAr4rn%7EvHhQKAsyQzIMIF-uUgAwDLsDIgSRedtVoKUyIlVGW3VbLvLvn7ulSx8WA3ROuNFrjIzXkKZN1JPQuzLRYRpYqqila2schHJDtOuSYKkF-dL2%7Ed6Gs6-406D75PRCA3IyuXaKz9KI91LsG016NeHqGdq1ZD8fYDHg8ZSbaCrOG7AQu0DS-xBuJXatw__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+11/20/2024 12:21:13 - WARNING - huggingface_hub.file_download - Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732331518&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMzMTUxOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=EXNBuhv3shpFCidvTHMteCcp9NmKFYmla6%7E90o4mmB2ZIWUdvkiz4EWHrLL%7Eh0PY%7Enmt5imvESxikri9bCcJHQbhC3yFPF7F%7E7hFlJOxxgNU2x%7EU0%7EzkRxwtPJn2hhvmR5ekAwcRo3v2sNDfBkFJk%7ESAr4rn%7EvHhQKAsyQzIMIF-uUgAwDLsDIgSRedtVoKUyIlVGW3VbLvLvn7ulSx8WA3ROuNFrjIzXkKZN1JPQuzLRYRpYqqila2schHJDtOuSYKkF-dL2%7Ed6Gs6-406D75PRCA3IyuXaKz9KI91LsG016NeHqGdq1ZD8fYDHg8ZSbaCrOG7AQu0DS-xBuJXatw__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732331518&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMzMTUxOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=EXNBuhv3shpFCidvTHMteCcp9NmKFYmla6%7E90o4mmB2ZIWUdvkiz4EWHrLL%7Eh0PY%7Enmt5imvESxikri9bCcJHQbhC3yFPF7F%7E7hFlJOxxgNU2x%7EU0%7EzkRxwtPJn2hhvmR5ekAwcRo3v2sNDfBkFJk%7ESAr4rn%7EvHhQKAsyQzIMIF-uUgAwDLsDIgSRedtVoKUyIlVGW3VbLvLvn7ulSx8WA3ROuNFrjIzXkKZN1JPQuzLRYRpYqqila2schHJDtOuSYKkF-dL2%7Ed6Gs6-406D75PRCA3IyuXaKz9KI91LsG016NeHqGdq1ZD8fYDHg8ZSbaCrOG7AQu0DS-xBuJXatw__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+11/20/2024 12:24:40 - WARNING - huggingface_hub.file_download - Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732331518&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMzMTUxOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=EXNBuhv3shpFCidvTHMteCcp9NmKFYmla6%7E90o4mmB2ZIWUdvkiz4EWHrLL%7Eh0PY%7Enmt5imvESxikri9bCcJHQbhC3yFPF7F%7E7hFlJOxxgNU2x%7EU0%7EzkRxwtPJn2hhvmR5ekAwcRo3v2sNDfBkFJk%7ESAr4rn%7EvHhQKAsyQzIMIF-uUgAwDLsDIgSRedtVoKUyIlVGW3VbLvLvn7ulSx8WA3ROuNFrjIzXkKZN1JPQuzLRYRpYqqila2schHJDtOuSYKkF-dL2%7Ed6Gs6-406D75PRCA3IyuXaKz9KI91LsG016NeHqGdq1ZD8fYDHg8ZSbaCrOG7AQu0DS-xBuJXatw__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732331518&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMzMTUxOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=EXNBuhv3shpFCidvTHMteCcp9NmKFYmla6%7E90o4mmB2ZIWUdvkiz4EWHrLL%7Eh0PY%7Enmt5imvESxikri9bCcJHQbhC3yFPF7F%7E7hFlJOxxgNU2x%7EU0%7EzkRxwtPJn2hhvmR5ekAwcRo3v2sNDfBkFJk%7ESAr4rn%7EvHhQKAsyQzIMIF-uUgAwDLsDIgSRedtVoKUyIlVGW3VbLvLvn7ulSx8WA3ROuNFrjIzXkKZN1JPQuzLRYRpYqqila2schHJDtOuSYKkF-dL2%7Ed6Gs6-406D75PRCA3IyuXaKz9KI91LsG016NeHqGdq1ZD8fYDHg8ZSbaCrOG7AQu0DS-xBuJXatw__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+11/20/2024 12:28:24 - WARNING - huggingface_hub.file_download - Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732331518&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMzMTUxOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=EXNBuhv3shpFCidvTHMteCcp9NmKFYmla6%7E90o4mmB2ZIWUdvkiz4EWHrLL%7Eh0PY%7Enmt5imvESxikri9bCcJHQbhC3yFPF7F%7E7hFlJOxxgNU2x%7EU0%7EzkRxwtPJn2hhvmR5ekAwcRo3v2sNDfBkFJk%7ESAr4rn%7EvHhQKAsyQzIMIF-uUgAwDLsDIgSRedtVoKUyIlVGW3VbLvLvn7ulSx8WA3ROuNFrjIzXkKZN1JPQuzLRYRpYqqila2schHJDtOuSYKkF-dL2%7Ed6Gs6-406D75PRCA3IyuXaKz9KI91LsG016NeHqGdq1ZD8fYDHg8ZSbaCrOG7AQu0DS-xBuJXatw__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732331518&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMzMTUxOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=EXNBuhv3shpFCidvTHMteCcp9NmKFYmla6%7E90o4mmB2ZIWUdvkiz4EWHrLL%7Eh0PY%7Enmt5imvESxikri9bCcJHQbhC3yFPF7F%7E7hFlJOxxgNU2x%7EU0%7EzkRxwtPJn2hhvmR5ekAwcRo3v2sNDfBkFJk%7ESAr4rn%7EvHhQKAsyQzIMIF-uUgAwDLsDIgSRedtVoKUyIlVGW3VbLvLvn7ulSx8WA3ROuNFrjIzXkKZN1JPQuzLRYRpYqqila2schHJDtOuSYKkF-dL2%7Ed6Gs6-406D75PRCA3IyuXaKz9KI91LsG016NeHqGdq1ZD8fYDHg8ZSbaCrOG7AQu0DS-xBuJXatw__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+11/20/2024 12:44:55 - WARNING - huggingface_hub.file_download - Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732331518&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMzMTUxOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=EXNBuhv3shpFCidvTHMteCcp9NmKFYmla6%7E90o4mmB2ZIWUdvkiz4EWHrLL%7Eh0PY%7Enmt5imvESxikri9bCcJHQbhC3yFPF7F%7E7hFlJOxxgNU2x%7EU0%7EzkRxwtPJn2hhvmR5ekAwcRo3v2sNDfBkFJk%7ESAr4rn%7EvHhQKAsyQzIMIF-uUgAwDLsDIgSRedtVoKUyIlVGW3VbLvLvn7ulSx8WA3ROuNFrjIzXkKZN1JPQuzLRYRpYqqila2schHJDtOuSYKkF-dL2%7Ed6Gs6-406D75PRCA3IyuXaKz9KI91LsG016NeHqGdq1ZD8fYDHg8ZSbaCrOG7AQu0DS-xBuJXatw__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732331518&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMzMTUxOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=EXNBuhv3shpFCidvTHMteCcp9NmKFYmla6%7E90o4mmB2ZIWUdvkiz4EWHrLL%7Eh0PY%7Enmt5imvESxikri9bCcJHQbhC3yFPF7F%7E7hFlJOxxgNU2x%7EU0%7EzkRxwtPJn2hhvmR5ekAwcRo3v2sNDfBkFJk%7ESAr4rn%7EvHhQKAsyQzIMIF-uUgAwDLsDIgSRedtVoKUyIlVGW3VbLvLvn7ulSx8WA3ROuNFrjIzXkKZN1JPQuzLRYRpYqqila2schHJDtOuSYKkF-dL2%7Ed6Gs6-406D75PRCA3IyuXaKz9KI91LsG016NeHqGdq1ZD8fYDHg8ZSbaCrOG7AQu0DS-xBuJXatw__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+11/20/2024 12:51:26 - WARNING - huggingface_hub.file_download - Error while downloading from https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732331518&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjMzMTUxOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=EXNBuhv3shpFCidvTHMteCcp9NmKFYmla6%7E90o4mmB2ZIWUdvkiz4EWHrLL%7Eh0PY%7Enmt5imvESxikri9bCcJHQbhC3yFPF7F%7E7hFlJOxxgNU2x%7EU0%7EzkRxwtPJn2hhvmR5ekAwcRo3v2sNDfBkFJk%7ESAr4rn%7EvHhQKAsyQzIMIF-uUgAwDLsDIgSRedtVoKUyIlVGW3VbLvLvn7ulSx8WA3ROuNFrjIzXkKZN1JPQuzLRYRpYqqila2schHJDtOuSYKkF-dL2%7Ed6Gs6-406D75PRCA3IyuXaKz9KI91LsG016NeHqGdq1ZD8fYDHg8ZSbaCrOG7AQu0DS-xBuJXatw__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+Could not set the permissions on the file '/mnt/petrelfs/zhaoshitian/.cache/huggingface/hub/models--xlabs-ai--xflux_text_encoders/blobs/a5640855b301fcdbceddfa90ae8066cd9414aff020552a201a255ecf2059da00.incomplete'. Error: [Errno 2] No such file or directory: '/mnt/petrelfs/zhaoshitian/.cache/huggingface/hub/models--xlabs-ai--xflux_text_encoders/blobs/a5640855b301fcdbceddfa90ae8066cd9414aff020552a201a255ecf2059da00.incomplete'.
+Continuing without setting permissions.
+11/20/2024 12:53:17 - WARNING - huggingface_hub.file_download - Could not set the permissions on the file '/mnt/petrelfs/zhaoshitian/.cache/huggingface/hub/models--xlabs-ai--xflux_text_encoders/blobs/a5640855b301fcdbceddfa90ae8066cd9414aff020552a201a255ecf2059da00.incomplete'. Error: [Errno 2] No such file or directory: '/mnt/petrelfs/zhaoshitian/.cache/huggingface/hub/models--xlabs-ai--xflux_text_encoders/blobs/a5640855b301fcdbceddfa90ae8066cd9414aff020552a201a255ecf2059da00.incomplete'.
+Continuing without setting permissions.
+Downloading shards:  50%|█████     | 1/2 [1:23:28<1:23:28, 5008.72s/it]
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/shutil.py", line 813, in move
+[rank0]:     os.rename(src, real_dst)
+[rank0]: FileNotFoundError: [Errno 2] No such file or directory: '/mnt/petrelfs/zhaoshitian/.cache/huggingface/hub/models--xlabs-ai--xflux_text_encoders/blobs/a5640855b301fcdbceddfa90ae8066cd9414aff020552a201a255ecf2059da00.incomplete' -> '/mnt/petrelfs/zhaoshitian/.cache/huggingface/hub/models--xlabs-ai--xflux_text_encoders/blobs/a5640855b301fcdbceddfa90ae8066cd9414aff020552a201a255ecf2059da00'
+
+[rank0]: During handling of the above exception, another exception occurred:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1608, in _copy_no_matter_what
+[rank0]:     shutil.copy2(src, dst)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/shutil.py", line 434, in copy2
+[rank0]:     copyfile(src, dst, follow_symlinks=follow_symlinks)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/shutil.py", line 254, in copyfile
+[rank0]:     with open(src, 'rb') as fsrc:
+[rank0]: FileNotFoundError: [Errno 2] No such file or directory: '/mnt/petrelfs/zhaoshitian/.cache/huggingface/hub/models--xlabs-ai--xflux_text_encoders/blobs/a5640855b301fcdbceddfa90ae8066cd9414aff020552a201a255ecf2059da00.incomplete'
+
+[rank0]: During handling of the above exception, another exception occurred:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 317, in <module>
+[rank0]:     main()
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 103, in main
+[rank0]:     dit, vae, t5, clip = get_models(name=args.model_name, device=accelerator.device, offload=False, is_schnell=is_schnell)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 47, in get_models
+[rank0]:     t5 = load_t5(device, max_length=256 if is_schnell else 512)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/util.py", line 365, in load_t5
+[rank0]:     return HFEmbedder("xlabs-ai/xflux_text_encoders", max_length=max_length, torch_dtype=torch.bfloat16, force_download=True).to(device)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/conditioner.py", line 18, in __init__
+[rank0]:     self.hf_module: T5EncoderModel = T5EncoderModel.from_pretrained(version, **hf_kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3974, in from_pretrained
+[rank0]:     resolved_archive_file, sharded_metadata = get_checkpoint_shard_files(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 1098, in get_checkpoint_shard_files
+[rank0]:     cached_filename = cached_file(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank0]:     resolved_file = hf_hub_download(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 862, in hf_hub_download
+[rank0]:     return _hf_hub_download_to_cache_dir(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1011, in _hf_hub_download_to_cache_dir
+[rank0]:     _download_to_tmp_and_move(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1555, in _download_to_tmp_and_move
+[rank0]:     _chmod_and_move(incomplete_path, destination_path)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1597, in _chmod_and_move
+[rank0]:     shutil.move(str(src), str(dst), copy_function=_copy_no_matter_what)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/shutil.py", line 833, in move
+[rank0]:     copy_function(src, real_dst)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1611, in _copy_no_matter_what
+[rank0]:     shutil.copyfile(src, dst)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/shutil.py", line 254, in copyfile
+[rank0]:     with open(src, 'rb') as fsrc:
+[rank0]: FileNotFoundError: [Errno 2] No such file or directory: '/mnt/petrelfs/zhaoshitian/.cache/huggingface/hub/models--xlabs-ai--xflux_text_encoders/blobs/a5640855b301fcdbceddfa90ae8066cd9414aff020552a201a255ecf2059da00.incomplete'
+[rank0]:[W1120 12:53:18.833281468 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W1120 12:53:18.709588 93667 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 93766 closing signal SIGTERM
+W1120 12:53:18.712580 93667 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 93768 closing signal SIGTERM
+W1120 12:53:18.713140 93667 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 93769 closing signal SIGTERM
+E1120 12:53:19.178396 93667 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 93765) of binary: /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/python
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1159, in launch_command
+    multi_gpu_launcher(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 793, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_flux_deepspeed_controlnet.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-11-20_12:53:18
+  host      : SH-IDC1-10-140-0-204
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 93765)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: SH-IDC1-10-140-0-204: task 0: Exited with exit code 1

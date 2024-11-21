@@ -38,6 +38,7 @@ from src.flux.sampling import denoise, get_noise, get_schedule, prepare, unpack
 from src.flux.util import (configs, load_ae, load_clip,
                        load_flow_model2, load_controlnet, load_t5)
 # from image_datasets.canny_dataset import loader
+# from image_datasets.controlnet_dataset_parquet import loader
 from image_datasets.controlnet_dataset import loader
 if is_wandb_available():
     import wandb

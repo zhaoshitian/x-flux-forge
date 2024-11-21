@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/accelerate", line 5, in <module>
+    from accelerate.commands.accelerate_cli import main
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/__init__.py", line 16, in <module>
+srun: error: SH-IDC1-10-140-0-183: task 0: Exited with exit code 1
+    from .accelerator import Accelerator
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 32, in <module>
+    import torch
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/__init__.py", line 367, in <module>
+    from torch._C import *  # noqa: F403
+ImportError: /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/lib/../../nvidia/cusparse/lib/libcusparse.so.12: symbol __nvJitLinkComplete_12_4, version libnvJitLink.so.12 not defined in file libnvJitLink.so.12 with link time reference

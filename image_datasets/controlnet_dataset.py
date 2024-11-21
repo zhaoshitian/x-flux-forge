@@ -114,8 +114,10 @@ class CustomImageDataset(Dataset):
             hint = resize_and_pad(hint, self.desired_width, self.desired_height)
             img = torch.from_numpy((np.array(img) / 127.5) - 1)
             img = img.permute(2, 0, 1)
+            # print(f"shape of image: {img.shape}")
             hint = torch.from_numpy((np.array(hint) / 127.5) - 1)
             hint = hint.permute(2, 0, 1)
+            # print(f"shape of hint: {hint.shape}")
             # prompt = json.load(open(json_path))['caption']
             prompt = self.data_list[idx]['caption']
             return img, hint, prompt

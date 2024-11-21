@@ -1,0 +1,184 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `4`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+11/20/2024 09:24:29 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 0
+Local process index: 0
+Device: cuda:0
+
+Mixed precision type: bf16
+
+DEVICE cuda:0
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 09:24:30 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 1
+Local process index: 1
+Device: cuda:1
+
+Mixed precision type: bf16
+
+DEVICE cuda:1
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 09:24:30 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 2
+Local process index: 2
+Device: cuda:2
+
+Mixed precision type: bf16
+
+DEVICE cuda:2
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 09:24:30 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 3
+Local process index: 3
+Device: cuda:3
+
+Mixed precision type: bf16
+
+DEVICE cuda:3
+Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s][rank1]: Traceback (most recent call last):
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/configuration_utils.py", line 668, in _get_config_dict
+[rank1]:     config_dict = cls._dict_from_json_file(resolved_config_file)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/configuration_utils.py", line 772, in _dict_from_json_file
+[rank1]:     return json.loads(text)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/json/__init__.py", line 346, in loads
+[rank1]:     return _default_decoder.decode(s)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/json/decoder.py", line 337, in decode
+[rank1]:     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/json/decoder.py", line 355, in raw_decode
+[rank1]:     raise JSONDecodeError("Expecting value", s, err.value) from None
+[rank1]: json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[rank1]: During handling of the above exception, another exception occurred:
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 317, in <module>
+[rank1]:     main()
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 103, in main
+[rank1]:     dit, vae, t5, clip = get_models(name=args.model_name, device=accelerator.device, offload=False, is_schnell=is_schnell)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 47, in get_models
+[rank1]:     t5 = load_t5(device, max_length=256 if is_schnell else 512)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/util.py", line 365, in load_t5
+[rank1]:     return HFEmbedder("xlabs-ai/xflux_text_encoders", max_length=max_length, torch_dtype=torch.bfloat16, force_download=True).to(device)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/conditioner.py", line 18, in __init__
+[rank1]:     self.hf_module: T5EncoderModel = T5EncoderModel.from_pretrained(version, **hf_kwargs)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3613, in from_pretrained
+[rank1]:     config, model_kwargs = cls.config_class.from_pretrained(
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/configuration_utils.py", line 545, in from_pretrained
+[rank1]:     config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/configuration_utils.py", line 574, in get_config_dict
+[rank1]:     config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/configuration_utils.py", line 672, in _get_config_dict
+[rank1]:     raise EnvironmentError(
+[rank1]: OSError: It looks like the config file at '/mnt/petrelfs/zhaoshitian/.cache/huggingface/hub/models--xlabs-ai--xflux_text_encoders/snapshots/5ce032c6b9bfe31a4ffb220c8afa147e8de6acea/config.json' is not a valid JSON file.
+Could not set the permissions on the file '/mnt/petrelfs/zhaoshitian/.cache/huggingface/hub/models--xlabs-ai--xflux_text_encoders/blobs/b00a8a6908682a2091f1194b81f220fd2b67c41c.incomplete'. Error: [Errno 2] No such file or directory: '/mnt/petrelfs/zhaoshitian/.cache/huggingface/hub/models--xlabs-ai--xflux_text_encoders/blobs/b00a8a6908682a2091f1194b81f220fd2b67c41c.incomplete'.
+Continuing without setting permissions.
+11/20/2024 09:24:33 - WARNING - huggingface_hub.file_download - Could not set the permissions on the file '/mnt/petrelfs/zhaoshitian/.cache/huggingface/hub/models--xlabs-ai--xflux_text_encoders/blobs/b00a8a6908682a2091f1194b81f220fd2b67c41c.incomplete'. Error: [Errno 2] No such file or directory: '/mnt/petrelfs/zhaoshitian/.cache/huggingface/hub/models--xlabs-ai--xflux_text_encoders/blobs/b00a8a6908682a2091f1194b81f220fd2b67c41c.incomplete'.
+Continuing without setting permissions.
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/shutil.py", line 813, in move
+[rank3]:     os.rename(src, real_dst)
+[rank3]: FileNotFoundError: [Errno 2] No such file or directory: '/mnt/petrelfs/zhaoshitian/.cache/huggingface/hub/models--xlabs-ai--xflux_text_encoders/blobs/b00a8a6908682a2091f1194b81f220fd2b67c41c.incomplete' -> '/mnt/petrelfs/zhaoshitian/.cache/huggingface/hub/models--xlabs-ai--xflux_text_encoders/blobs/b00a8a6908682a2091f1194b81f220fd2b67c41c'
+
+[rank3]: During handling of the above exception, another exception occurred:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1608, in _copy_no_matter_what
+[rank3]:     shutil.copy2(src, dst)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/shutil.py", line 434, in copy2
+[rank3]:     copyfile(src, dst, follow_symlinks=follow_symlinks)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/shutil.py", line 254, in copyfile
+[rank3]:     with open(src, 'rb') as fsrc:
+[rank3]: FileNotFoundError: [Errno 2] No such file or directory: '/mnt/petrelfs/zhaoshitian/.cache/huggingface/hub/models--xlabs-ai--xflux_text_encoders/blobs/b00a8a6908682a2091f1194b81f220fd2b67c41c.incomplete'
+
+[rank3]: During handling of the above exception, another exception occurred:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 317, in <module>
+[rank3]:     main()
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 103, in main
+[rank3]:     dit, vae, t5, clip = get_models(name=args.model_name, device=accelerator.device, offload=False, is_schnell=is_schnell)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 47, in get_models
+[rank3]:     t5 = load_t5(device, max_length=256 if is_schnell else 512)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/util.py", line 365, in load_t5
+[rank3]:     return HFEmbedder("xlabs-ai/xflux_text_encoders", max_length=max_length, torch_dtype=torch.bfloat16, force_download=True).to(device)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/conditioner.py", line 18, in __init__
+[rank3]:     self.hf_module: T5EncoderModel = T5EncoderModel.from_pretrained(version, **hf_kwargs)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3613, in from_pretrained
+[rank3]:     config, model_kwargs = cls.config_class.from_pretrained(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/configuration_utils.py", line 545, in from_pretrained
+[rank3]:     config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/configuration_utils.py", line 574, in get_config_dict
+[rank3]:     config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/configuration_utils.py", line 633, in _get_config_dict
+[rank3]:     resolved_config_file = cached_file(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank3]:     resolved_file = hf_hub_download(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank3]:     return fn(*args, **kwargs)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 862, in hf_hub_download
+[rank3]:     return _hf_hub_download_to_cache_dir(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1011, in _hf_hub_download_to_cache_dir
+[rank3]:     _download_to_tmp_and_move(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1555, in _download_to_tmp_and_move
+[rank3]:     _chmod_and_move(incomplete_path, destination_path)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1597, in _chmod_and_move
+[rank3]:     shutil.move(str(src), str(dst), copy_function=_copy_no_matter_what)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/shutil.py", line 833, in move
+[rank3]:     copy_function(src, real_dst)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1611, in _copy_no_matter_what
+[rank3]:     shutil.copyfile(src, dst)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/shutil.py", line 254, in copyfile
+[rank3]:     with open(src, 'rb') as fsrc:
+[rank3]: FileNotFoundError: [Errno 2] No such file or directory: '/mnt/petrelfs/zhaoshitian/.cache/huggingface/hub/models--xlabs-ai--xflux_text_encoders/blobs/b00a8a6908682a2091f1194b81f220fd2b67c41c.incomplete'
+Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]W1120 09:24:34.133661 152111 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 152349 closing signal SIGTERM
+W1120 09:24:34.136343 152111 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 152351 closing signal SIGTERM
+W1120 09:24:34.136867 152111 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 152353 closing signal SIGTERM
+E1120 09:24:34.515168 152111 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 1 (pid: 152350) of binary: /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/python
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1159, in launch_command
+    multi_gpu_launcher(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 793, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_flux_deepspeed_controlnet.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-11-20_09:24:34
+  host      : SH-IDC1-10-140-0-184
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 152350)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: SH-IDC1-10-140-0-184: task 0: Exited with exit code 1

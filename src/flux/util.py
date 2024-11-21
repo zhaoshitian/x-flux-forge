@@ -165,10 +165,10 @@ class ModelSpec:
 
 configs = {
     "flux-dev": ModelSpec(
-        repo_id="/data2/stzhao/model_weight/FLUX.1-dev",
-        repo_id_ae="/data2/stzhao/model_weight/FLUX.1-dev",
-        repo_flow="/data2/stzhao/model_weight/FLUX.1-dev/flux1-dev.safetensors",
-        repo_ae="/data2/stzhao/model_weight/FLUX.1-dev/ae.safetensors",
+        repo_id="/mnt/petrelfs/zhaoshitian/alpha_vl/zhaoshitian/FLUX.1-dev",
+        repo_id_ae="/mnt/petrelfs/zhaoshitian/alpha_vl/zhaoshitian/FLUX.1-dev",
+        repo_flow="/mnt/petrelfs/zhaoshitian/alpha_vl/zhaoshitian/FLUX.1-dev/flux1-dev.safetensors",
+        repo_ae="/mnt/petrelfs/zhaoshitian/alpha_vl/zhaoshitian/FLUX.1-dev/ae.safetensors",
         ckpt_path=os.getenv("FLUX_DEV"),
         params=FluxParams(
             in_channels=64,
@@ -362,12 +362,12 @@ def load_controlnet(name, device, transformer=None):
 
 def load_t5(device: str | torch.device = "cuda", max_length: int = 512) -> HFEmbedder:
     # max length 64, 128, 256 and 512 should work (if your sequence is short enough)
-    return HFEmbedder("xlabs-ai/xflux_text_encoders", max_length=max_length, torch_dtype=torch.bfloat16).to(device)
-    # return HFEmbedder("/data2/stzhao/model_weight/FLUX.1-dev/text_encoder_2", max_length=max_length, torch_dtype=torch.bfloat16).to(device)
+    return HFEmbedder("/mnt/petrelfs/zhaoshitian/models/xflux_text_encoders", max_length=max_length, torch_dtype=torch.bfloat16, force_download=False).to(device)
+    # return HFEmbedder("/mnt/petrelfs/zhaoshitian/alpha_vl/zhaoshitian/FLUX.1-dev/text_encoder_2", max_length=max_length, torch_dtype=torch.bfloat16).to(device)
 
 def load_clip(device: str | torch.device = "cuda") -> HFEmbedder:
-    return HFEmbedder("openai/clip-vit-large-patch14", max_length=77, torch_dtype=torch.bfloat16).to(device)
-    # return HFEmbedder("/data2/stzhao/model_weight/FLUX.1-dev/text_encoder", max_length=77, torch_dtype=torch.bfloat16).to(device)
+    return HFEmbedder("/mnt/petrelfs/zhaoshitian/models/clip-vit-large-patch14", max_length=77, torch_dtype=torch.bfloat16, force_download=False).to(device)
+    # return HFEmbedder("/mnt/petrelfs/zhaoshitian/alpha_vl/zhaoshitian/FLUX.1-dev/text_encoder", max_length=77, torch_dtype=torch.bfloat16).to(device)
 
 
 def load_ae(name: str, device: str | torch.device = "cuda", hf_download: bool = True) -> AutoEncoder:

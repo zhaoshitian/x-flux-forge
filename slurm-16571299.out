@@ -1,0 +1,113 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `8`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+11/19/2024 18:54:20 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 8
+Process index: 0
+Local process index: 0
+Device: cuda:0
+
+Mixed precision type: bf16
+
+DEVICE cuda:0
+Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/19/2024 18:54:25 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 8
+Process index: 4
+Local process index: 4
+Device: cuda:4
+
+Mixed precision type: bf16
+
+DEVICE cuda:4
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/19/2024 18:54:25 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 8
+Process index: 1
+Local process index: 1
+Device: cuda:1
+
+Mixed precision type: bf16
+
+DEVICE cuda:1
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/19/2024 18:54:25 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 8
+Process index: 7
+Local process index: 7
+Device: cuda:7
+
+Mixed precision type: bf16
+
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+DEVICE cuda:7
+11/19/2024 18:54:25 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 8
+Process index: 2
+Local process index: 2
+Device: cuda:2
+
+Mixed precision type: bf16
+
+DEVICE cuda:2
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/19/2024 18:54:25 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 8
+Process index: 6
+Local process index: 6
+Device: cuda:6
+
+Mixed precision type: bf16
+
+DEVICE cuda:6
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/19/2024 18:54:26 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 8
+Process index: 5
+Local process index: 5
+Device: cuda:5
+
+Mixed precision type: bf16
+
+DEVICE cuda:5
+DEVICE cuda:3
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/19/2024 18:54:26 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 8
+Process index: 3
+Local process index: 3
+Device: cuda:3
+
+Mixed precision type: bf16
+
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+srun: Easily find out why your job was killed by following the link below:
+	https://docs.phoenix.sensetime.com/FAQ/SlurmFAQ/Find-out-why-my-job-was-killed/
+srun: got SIGCONT
+Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]slurmstepd: error: *** STEP 16571299.0 ON SH-IDC1-10-140-0-131 CANCELLED AT 2024-11-19T18:59:01 ***
+slurmstepd: error: *** JOB 16571299 ON SH-IDC1-10-140-0-131 CANCELLED AT 2024-11-19T18:59:01 ***
+srun: forcing job termination
+W1119 18:59:01.851387 117369 site-packages/torch/distributed/elastic/agent/server/api.py:704] Received Signals.SIGTERM death signal, shutting down workers
+W1119 18:59:01.858287 117369 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 120044 closing signal SIGTERM
+W1119 18:59:01.859623 117369 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 120045 closing signal SIGTERM
+W1119 18:59:01.865316 117369 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 120046 closing signal SIGTERM
+W1119 18:59:01.873810 117369 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 120047 closing signal SIGTERM
+W1119 18:59:01.879961 117369 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 120048 closing signal SIGTERM
+W1119 18:59:01.884552 117369 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 120049 closing signal SIGTERM
+W1119 18:59:01.889859 117369 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 120050 closing signal SIGTERM
+W1119 18:59:01.949976 117369 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 120051 closing signal SIGTERM

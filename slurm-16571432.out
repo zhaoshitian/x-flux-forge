@@ -1,0 +1,282 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `4`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+11/19/2024 19:08:12 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 0
+Local process index: 0
+Device: cuda:0
+
+Mixed precision type: bf16
+
+DEVICE cuda:0
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/19/2024 19:08:13 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 1
+Local process index: 1
+Device: cuda:1
+
+Mixed precision type: bf16
+
+DEVICE cuda:1
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/19/2024 19:08:13 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 3
+Local process index: 3
+Device: cuda:3
+
+Mixed precision type: bf16
+
+DEVICE cuda:3
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/19/2024 19:08:13 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 2
+Local process index: 2
+Device: cuda:2
+
+Mixed precision type: bf16
+
+DEVICE cuda:2
+Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/2 [09:42<?, ?it/s]
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 317, in <module>
+[rank2]:     main()
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 103, in main
+[rank2]:     dit, vae, t5, clip = get_models(name=args.model_name, device=accelerator.device, offload=False, is_schnell=is_schnell)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 47, in get_models
+[rank2]:     t5 = load_t5(device, max_length=256 if is_schnell else 512)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/util.py", line 365, in load_t5
+[rank2]:     return HFEmbedder("xlabs-ai/xflux_text_encoders", max_length=max_length, torch_dtype=torch.bfloat16).to(device)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/conditioner.py", line 18, in __init__
+[rank2]:     self.hf_module: T5EncoderModel = T5EncoderModel.from_pretrained(version, **hf_kwargs)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3974, in from_pretrained
+[rank2]:     resolved_archive_file, sharded_metadata = get_checkpoint_shard_files(
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 1098, in get_checkpoint_shard_files
+[rank2]:     cached_filename = cached_file(
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank2]:     resolved_file = hf_hub_download(
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank2]:     return fn(*args, **kwargs)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 862, in hf_hub_download
+[rank2]:     return _hf_hub_download_to_cache_dir(
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1011, in _hf_hub_download_to_cache_dir
+[rank2]:     _download_to_tmp_and_move(
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1545, in _download_to_tmp_and_move
+[rank2]:     http_get(
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 483, in http_get
+[rank2]:     raise EnvironmentError(
+[rank2]: OSError: Consistency check failed: file should be of size 4994582224 but has size 6346458832 (model-00001-of-00002.safetensors).
+[rank2]: We are sorry for the inconvenience. Please retry with `force_download=True`.
+[rank2]: If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+Downloading shards:   0%|          | 0/2 [09:42<?, ?it/s]
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 406, in hf_raise_for_status
+[rank3]:     response.raise_for_status()
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+[rank3]:     raise HTTPError(http_error_msg, response=self)
+[rank3]: requests.exceptions.HTTPError: 416 Client Error: Requested Range Not Satisfiable for url: https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732273699&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjI3MzY5OX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=lhR3OK0h~HPEBlrsg2EPuqDFdFBPUp~5PostCNezE8CdPp40SoIb5wwREfsH-GQd3MFufkAYzG-AzHHS0NoE7j2voZXhkXQMomDYlW5UnTgqLqKDmzemUxL1WDy6BmtbKUufUOlojTRwEC1-aVAMAsX1QRhUWKYjC-ZH-aF6kLHkIKD4AAGPIywmNxf8JKBuqUxOQAAaq1wFCYvP9jXvVxGpuI0GlT~glfQ9T4TlS0JpZQthMVy9oUHV1hvGrG1QthkC1P2RIeqBxhXY~4WroV8zh3fLIkOy1549Dtdv5qGKuv1YqCAWqFetFXPgaT0mRMGTSoAoZ3yOGAikXmrfuQ__&Key-Pair-Id=K24J24Z295AEI9
+
+[rank3]: The above exception was the direct cause of the following exception:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank3]:     resolved_file = hf_hub_download(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank3]:     return fn(*args, **kwargs)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 862, in hf_hub_download
+[rank3]:     return _hf_hub_download_to_cache_dir(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1011, in _hf_hub_download_to_cache_dir
+[rank3]:     _download_to_tmp_and_move(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1545, in _download_to_tmp_and_move
+[rank3]:     http_get(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 368, in http_get
+[rank3]:     r = _request_wrapper(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 301, in _request_wrapper
+[rank3]:     hf_raise_for_status(response)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 473, in hf_raise_for_status
+[rank3]:     raise _format(HfHubHTTPError, message, response) from e
+[rank3]: huggingface_hub.errors.HfHubHTTPError: 416 Client Error: Requested Range Not Satisfiable for url: https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732273699&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjI3MzY5OX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=lhR3OK0h~HPEBlrsg2EPuqDFdFBPUp~5PostCNezE8CdPp40SoIb5wwREfsH-GQd3MFufkAYzG-AzHHS0NoE7j2voZXhkXQMomDYlW5UnTgqLqKDmzemUxL1WDy6BmtbKUufUOlojTRwEC1-aVAMAsX1QRhUWKYjC-ZH-aF6kLHkIKD4AAGPIywmNxf8JKBuqUxOQAAaq1wFCYvP9jXvVxGpuI0GlT~glfQ9T4TlS0JpZQthMVy9oUHV1hvGrG1QthkC1P2RIeqBxhXY~4WroV8zh3fLIkOy1549Dtdv5qGKuv1YqCAWqFetFXPgaT0mRMGTSoAoZ3yOGAikXmrfuQ__&Key-Pair-Id=K24J24Z295AEI9. Requested range: bytes=6346458832-. Content-Range: None.
+
+[rank3]: During handling of the above exception, another exception occurred:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 317, in <module>
+[rank3]:     main()
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 103, in main
+[rank3]:     dit, vae, t5, clip = get_models(name=args.model_name, device=accelerator.device, offload=False, is_schnell=is_schnell)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 47, in get_models
+[rank3]:     t5 = load_t5(device, max_length=256 if is_schnell else 512)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/util.py", line 365, in load_t5
+[rank3]:     return HFEmbedder("xlabs-ai/xflux_text_encoders", max_length=max_length, torch_dtype=torch.bfloat16).to(device)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/conditioner.py", line 18, in __init__
+[rank3]:     self.hf_module: T5EncoderModel = T5EncoderModel.from_pretrained(version, **hf_kwargs)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3974, in from_pretrained
+[rank3]:     resolved_archive_file, sharded_metadata = get_checkpoint_shard_files(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 1098, in get_checkpoint_shard_files
+[rank3]:     cached_filename = cached_file(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 467, in cached_file
+[rank3]:     raise EnvironmentError(f"There was a specific connection error when trying to load {path_or_repo_id}:\n{err}")
+[rank3]: OSError: There was a specific connection error when trying to load xlabs-ai/xflux_text_encoders:
+[rank3]: 416 Client Error: Requested Range Not Satisfiable for url: https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732273699&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjI3MzY5OX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=lhR3OK0h~HPEBlrsg2EPuqDFdFBPUp~5PostCNezE8CdPp40SoIb5wwREfsH-GQd3MFufkAYzG-AzHHS0NoE7j2voZXhkXQMomDYlW5UnTgqLqKDmzemUxL1WDy6BmtbKUufUOlojTRwEC1-aVAMAsX1QRhUWKYjC-ZH-aF6kLHkIKD4AAGPIywmNxf8JKBuqUxOQAAaq1wFCYvP9jXvVxGpuI0GlT~glfQ9T4TlS0JpZQthMVy9oUHV1hvGrG1QthkC1P2RIeqBxhXY~4WroV8zh3fLIkOy1549Dtdv5qGKuv1YqCAWqFetFXPgaT0mRMGTSoAoZ3yOGAikXmrfuQ__&Key-Pair-Id=K24J24Z295AEI9. Requested range: bytes=6346458832-. Content-Range: None.
+Downloading shards:   0%|          | 0/2 [09:42<?, ?it/s]
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 406, in hf_raise_for_status
+[rank1]:     response.raise_for_status()
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+[rank1]:     raise HTTPError(http_error_msg, response=self)
+[rank1]: requests.exceptions.HTTPError: 416 Client Error: Requested Range Not Satisfiable for url: https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732272415&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjI3MjQxNX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=trmt4PzIWa0cHcPczr9Sz6x81GrzvntIh2kaq4Q9inmTSzYKpqSaH43vsPrw0m4-11o3DqhJBZ35GmfVAf4qZIgyvh2crfeh6OkAd9jYcTPTsMUZrNUpDZP~jbGpVYZ3TUW1~~KIkS9LqCcJWY0y~aKM4BLMtV6ft-x5sAfSIC~j-5m5uT9DbzSu~08kyzks1776M5PjHhAPY6pwPr4tJuSkysygJo-SE7XD~g7buHKOhlbN4dYy1TGFFJZSB~yUWK7MjYPwXKiekiLkFLQmnplwwXvj7zYAA8z6dxTkHc~SMMXV35R~5ZvDeWab6N2IKYfkQDUJEvmDw~OnsldXyQ__&Key-Pair-Id=K24J24Z295AEI9
+
+[rank1]: The above exception was the direct cause of the following exception:
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank1]:     resolved_file = hf_hub_download(
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank1]:     return fn(*args, **kwargs)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 862, in hf_hub_download
+[rank1]:     return _hf_hub_download_to_cache_dir(
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1011, in _hf_hub_download_to_cache_dir
+[rank1]:     _download_to_tmp_and_move(
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1545, in _download_to_tmp_and_move
+[rank1]:     http_get(
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 368, in http_get
+[rank1]:     r = _request_wrapper(
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 301, in _request_wrapper
+[rank1]:     hf_raise_for_status(response)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 473, in hf_raise_for_status
+[rank1]:     raise _format(HfHubHTTPError, message, response) from e
+[rank1]: huggingface_hub.errors.HfHubHTTPError: 416 Client Error: Requested Range Not Satisfiable for url: https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732272415&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjI3MjQxNX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=trmt4PzIWa0cHcPczr9Sz6x81GrzvntIh2kaq4Q9inmTSzYKpqSaH43vsPrw0m4-11o3DqhJBZ35GmfVAf4qZIgyvh2crfeh6OkAd9jYcTPTsMUZrNUpDZP~jbGpVYZ3TUW1~~KIkS9LqCcJWY0y~aKM4BLMtV6ft-x5sAfSIC~j-5m5uT9DbzSu~08kyzks1776M5PjHhAPY6pwPr4tJuSkysygJo-SE7XD~g7buHKOhlbN4dYy1TGFFJZSB~yUWK7MjYPwXKiekiLkFLQmnplwwXvj7zYAA8z6dxTkHc~SMMXV35R~5ZvDeWab6N2IKYfkQDUJEvmDw~OnsldXyQ__&Key-Pair-Id=K24J24Z295AEI9. Requested range: bytes=6346458832-. Content-Range: None.
+
+[rank1]: During handling of the above exception, another exception occurred:
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 317, in <module>
+[rank1]:     main()
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 103, in main
+[rank1]:     dit, vae, t5, clip = get_models(name=args.model_name, device=accelerator.device, offload=False, is_schnell=is_schnell)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 47, in get_models
+[rank1]:     t5 = load_t5(device, max_length=256 if is_schnell else 512)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/util.py", line 365, in load_t5
+[rank1]:     return HFEmbedder("xlabs-ai/xflux_text_encoders", max_length=max_length, torch_dtype=torch.bfloat16).to(device)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/conditioner.py", line 18, in __init__
+[rank1]:     self.hf_module: T5EncoderModel = T5EncoderModel.from_pretrained(version, **hf_kwargs)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3974, in from_pretrained
+[rank1]:     resolved_archive_file, sharded_metadata = get_checkpoint_shard_files(
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 1098, in get_checkpoint_shard_files
+[rank1]:     cached_filename = cached_file(
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 467, in cached_file
+[rank1]:     raise EnvironmentError(f"There was a specific connection error when trying to load {path_or_repo_id}:\n{err}")
+[rank1]: OSError: There was a specific connection error when trying to load xlabs-ai/xflux_text_encoders:
+[rank1]: 416 Client Error: Requested Range Not Satisfiable for url: https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732272415&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjI3MjQxNX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=trmt4PzIWa0cHcPczr9Sz6x81GrzvntIh2kaq4Q9inmTSzYKpqSaH43vsPrw0m4-11o3DqhJBZ35GmfVAf4qZIgyvh2crfeh6OkAd9jYcTPTsMUZrNUpDZP~jbGpVYZ3TUW1~~KIkS9LqCcJWY0y~aKM4BLMtV6ft-x5sAfSIC~j-5m5uT9DbzSu~08kyzks1776M5PjHhAPY6pwPr4tJuSkysygJo-SE7XD~g7buHKOhlbN4dYy1TGFFJZSB~yUWK7MjYPwXKiekiLkFLQmnplwwXvj7zYAA8z6dxTkHc~SMMXV35R~5ZvDeWab6N2IKYfkQDUJEvmDw~OnsldXyQ__&Key-Pair-Id=K24J24Z295AEI9. Requested range: bytes=6346458832-. Content-Range: None.
+Downloading shards:   0%|          | 0/2 [09:42<?, ?it/s]
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 406, in hf_raise_for_status
+[rank0]:     response.raise_for_status()
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+[rank0]:     raise HTTPError(http_error_msg, response=self)
+[rank0]: requests.exceptions.HTTPError: 416 Client Error: Requested Range Not Satisfiable for url: https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732273699&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjI3MzY5OX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=lhR3OK0h~HPEBlrsg2EPuqDFdFBPUp~5PostCNezE8CdPp40SoIb5wwREfsH-GQd3MFufkAYzG-AzHHS0NoE7j2voZXhkXQMomDYlW5UnTgqLqKDmzemUxL1WDy6BmtbKUufUOlojTRwEC1-aVAMAsX1QRhUWKYjC-ZH-aF6kLHkIKD4AAGPIywmNxf8JKBuqUxOQAAaq1wFCYvP9jXvVxGpuI0GlT~glfQ9T4TlS0JpZQthMVy9oUHV1hvGrG1QthkC1P2RIeqBxhXY~4WroV8zh3fLIkOy1549Dtdv5qGKuv1YqCAWqFetFXPgaT0mRMGTSoAoZ3yOGAikXmrfuQ__&Key-Pair-Id=K24J24Z295AEI9
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank0]:     resolved_file = hf_hub_download(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 862, in hf_hub_download
+[rank0]:     return _hf_hub_download_to_cache_dir(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1011, in _hf_hub_download_to_cache_dir
+[rank0]:     _download_to_tmp_and_move(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1545, in _download_to_tmp_and_move
+[rank0]:     http_get(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 368, in http_get
+[rank0]:     r = _request_wrapper(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 301, in _request_wrapper
+[rank0]:     hf_raise_for_status(response)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 473, in hf_raise_for_status
+[rank0]:     raise _format(HfHubHTTPError, message, response) from e
+[rank0]: huggingface_hub.errors.HfHubHTTPError: 416 Client Error: Requested Range Not Satisfiable for url: https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732273699&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjI3MzY5OX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=lhR3OK0h~HPEBlrsg2EPuqDFdFBPUp~5PostCNezE8CdPp40SoIb5wwREfsH-GQd3MFufkAYzG-AzHHS0NoE7j2voZXhkXQMomDYlW5UnTgqLqKDmzemUxL1WDy6BmtbKUufUOlojTRwEC1-aVAMAsX1QRhUWKYjC-ZH-aF6kLHkIKD4AAGPIywmNxf8JKBuqUxOQAAaq1wFCYvP9jXvVxGpuI0GlT~glfQ9T4TlS0JpZQthMVy9oUHV1hvGrG1QthkC1P2RIeqBxhXY~4WroV8zh3fLIkOy1549Dtdv5qGKuv1YqCAWqFetFXPgaT0mRMGTSoAoZ3yOGAikXmrfuQ__&Key-Pair-Id=K24J24Z295AEI9. Requested range: bytes=6346458832-. Content-Range: None.
+
+[rank0]: During handling of the above exception, another exception occurred:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 317, in <module>
+[rank0]:     main()
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 103, in main
+[rank0]:     dit, vae, t5, clip = get_models(name=args.model_name, device=accelerator.device, offload=False, is_schnell=is_schnell)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 47, in get_models
+[rank0]:     t5 = load_t5(device, max_length=256 if is_schnell else 512)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/util.py", line 365, in load_t5
+[rank0]:     return HFEmbedder("xlabs-ai/xflux_text_encoders", max_length=max_length, torch_dtype=torch.bfloat16).to(device)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/conditioner.py", line 18, in __init__
+[rank0]:     self.hf_module: T5EncoderModel = T5EncoderModel.from_pretrained(version, **hf_kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3974, in from_pretrained
+[rank0]:     resolved_archive_file, sharded_metadata = get_checkpoint_shard_files(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 1098, in get_checkpoint_shard_files
+[rank0]:     cached_filename = cached_file(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/utils/hub.py", line 467, in cached_file
+[rank0]:     raise EnvironmentError(f"There was a specific connection error when trying to load {path_or_repo_id}:\n{err}")
+[rank0]: OSError: There was a specific connection error when trying to load xlabs-ai/xflux_text_encoders:
+[rank0]: 416 Client Error: Requested Range Not Satisfiable for url: https://cdn-lfs-us-1.hf.co/repos/2d/56/2d56bf0a78035a32beca195e5fd8a95b11853d23625209c43e60241a85a8b4a6/ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00002.safetensors%3B+filename%3D%22model-00001-of-00002.safetensors%22%3B&Expires=1732273699&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMjI3MzY5OX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzJkLzU2LzJkNTZiZjBhNzgwMzVhMzJiZWNhMTk1ZTVmZDhhOTViMTE4NTNkMjM2MjUyMDljNDNlNjAyNDFhODVhOGI0YTYvZWM4N2JmZmQxOTIzZThiMjc3NGE2ZDI0MGM5MjJhNDFmNjE0MzA4MWQ1MmNmODNiOGZlMzllOWQ4MzhjODkzZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=lhR3OK0h~HPEBlrsg2EPuqDFdFBPUp~5PostCNezE8CdPp40SoIb5wwREfsH-GQd3MFufkAYzG-AzHHS0NoE7j2voZXhkXQMomDYlW5UnTgqLqKDmzemUxL1WDy6BmtbKUufUOlojTRwEC1-aVAMAsX1QRhUWKYjC-ZH-aF6kLHkIKD4AAGPIywmNxf8JKBuqUxOQAAaq1wFCYvP9jXvVxGpuI0GlT~glfQ9T4TlS0JpZQthMVy9oUHV1hvGrG1QthkC1P2RIeqBxhXY~4WroV8zh3fLIkOy1549Dtdv5qGKuv1YqCAWqFetFXPgaT0mRMGTSoAoZ3yOGAikXmrfuQ__&Key-Pair-Id=K24J24Z295AEI9. Requested range: bytes=6346458832-. Content-Range: None.
+[rank0]:[W1119 19:18:01.476102024 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W1119 19:18:02.371930 288899 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 289153 closing signal SIGTERM
+E1119 19:18:02.538801 288899 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 289152) of binary: /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/python
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1159, in launch_command
+    multi_gpu_launcher(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 793, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_flux_deepspeed_controlnet.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2024-11-19_19:18:02
+  host      : SH-IDC1-10-140-1-68
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 289154)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2024-11-19_19:18:02
+  host      : SH-IDC1-10-140-1-68
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 289155)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-11-19_19:18:02
+  host      : SH-IDC1-10-140-1-68
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 289152)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: SH-IDC1-10-140-1-68: task 0: Exited with exit code 1

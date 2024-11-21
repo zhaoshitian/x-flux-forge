@@ -1,0 +1,185 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `4`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+11/20/2024 13:57:59 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 0
+Local process index: 0
+Device: cuda:0
+
+Mixed precision type: bf16
+
+DEVICE cuda:0
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 13:58:01 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 2
+Local process index: 2
+Device: cuda:2
+
+Mixed precision type: bf16
+
+DEVICE cuda:2
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 13:58:01 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 3
+Local process index: 3
+Device: cuda:3
+
+Mixed precision type: bf16
+
+DEVICE cuda:3
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 13:58:01 - INFO - __main__ - Distributed environment: MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 1
+Local process index: 1
+Device: cuda:1
+
+Mixed precision type: bf16
+
+DEVICE cuda:1
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.46it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.55it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.53it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.88it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.88it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.85it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.16it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.11it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.98it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.97it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.87it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.86it/s]
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 317, in <module>
+[rank2]:     main()
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 103, in main
+[rank2]:     dit, vae, t5, clip = get_models(name=args.model_name, device=accelerator.device, offload=False, is_schnell=is_schnell)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 48, in get_models
+[rank2]:     clip = load_clip(device)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/util.py", line 369, in load_clip
+[rank2]:     return HFEmbedder("/mnt/petrelfs/zhaoshitian/models/clip-vit-large-patch14", max_length=77, torch_dtype=torch.bfloat16, force_download=True).to(device)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/conditioner.py", line 17, in __init__
+[rank2]:     self.tokenizer: T5Tokenizer = T5Tokenizer.from_pretrained(version, max_length=max_length)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2213, in from_pretrained
+[rank2]:     return cls._from_pretrained(
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2447, in _from_pretrained
+[rank2]:     tokenizer = cls(*init_inputs, **init_kwargs)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/models/t5/tokenization_t5.py", line 150, in __init__
+[rank2]:     self.sp_model.Load(vocab_file)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/sentencepiece/__init__.py", line 961, in Load
+[rank2]:     return self.LoadFromFile(model_file)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/sentencepiece/__init__.py", line 316, in LoadFromFile
+[rank2]:     return _sentencepiece.SentencePieceProcessor_LoadFromFile(self, arg)
+[rank2]: TypeError: not a string
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'CLIPTokenizer'. 
+The class this function is called from is 'T5Tokenizer'.
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 317, in <module>
+[rank1]:     main()
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 103, in main
+[rank1]:     dit, vae, t5, clip = get_models(name=args.model_name, device=accelerator.device, offload=False, is_schnell=is_schnell)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 48, in get_models
+[rank1]:     clip = load_clip(device)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/util.py", line 369, in load_clip
+[rank1]:     return HFEmbedder("/mnt/petrelfs/zhaoshitian/models/clip-vit-large-patch14", max_length=77, torch_dtype=torch.bfloat16, force_download=True).to(device)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/conditioner.py", line 17, in __init__
+[rank1]:     self.tokenizer: T5Tokenizer = T5Tokenizer.from_pretrained(version, max_length=max_length)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2213, in from_pretrained
+[rank1]:     return cls._from_pretrained(
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2447, in _from_pretrained
+[rank1]:     tokenizer = cls(*init_inputs, **init_kwargs)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/models/t5/tokenization_t5.py", line 150, in __init__
+[rank1]:     self.sp_model.Load(vocab_file)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/sentencepiece/__init__.py", line 961, in Load
+[rank1]:     return self.LoadFromFile(model_file)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/sentencepiece/__init__.py", line 316, in LoadFromFile
+[rank1]:     return _sentencepiece.SentencePieceProcessor_LoadFromFile(self, arg)
+[rank1]: TypeError: not a string
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 317, in <module>
+[rank3]:     main()
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 103, in main
+[rank3]:     dit, vae, t5, clip = get_models(name=args.model_name, device=accelerator.device, offload=False, is_schnell=is_schnell)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 48, in get_models
+[rank3]:     clip = load_clip(device)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/util.py", line 369, in load_clip
+[rank3]:     return HFEmbedder("/mnt/petrelfs/zhaoshitian/models/clip-vit-large-patch14", max_length=77, torch_dtype=torch.bfloat16, force_download=True).to(device)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/conditioner.py", line 17, in __init__
+[rank3]:     self.tokenizer: T5Tokenizer = T5Tokenizer.from_pretrained(version, max_length=max_length)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2213, in from_pretrained
+[rank3]:     return cls._from_pretrained(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2447, in _from_pretrained
+[rank3]:     tokenizer = cls(*init_inputs, **init_kwargs)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/models/t5/tokenization_t5.py", line 150, in __init__
+[rank3]:     self.sp_model.Load(vocab_file)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/sentencepiece/__init__.py", line 961, in Load
+[rank3]:     return self.LoadFromFile(model_file)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/sentencepiece/__init__.py", line 316, in LoadFromFile
+[rank3]:     return _sentencepiece.SentencePieceProcessor_LoadFromFile(self, arg)
+[rank3]: TypeError: not a string
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 317, in <module>
+[rank0]:     main()
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 103, in main
+[rank0]:     dit, vae, t5, clip = get_models(name=args.model_name, device=accelerator.device, offload=False, is_schnell=is_schnell)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 48, in get_models
+[rank0]:     clip = load_clip(device)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/util.py", line 369, in load_clip
+[rank0]:     return HFEmbedder("/mnt/petrelfs/zhaoshitian/models/clip-vit-large-patch14", max_length=77, torch_dtype=torch.bfloat16, force_download=True).to(device)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/src/flux/modules/conditioner.py", line 17, in __init__
+[rank0]:     self.tokenizer: T5Tokenizer = T5Tokenizer.from_pretrained(version, max_length=max_length)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2213, in from_pretrained
+[rank0]:     return cls._from_pretrained(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2447, in _from_pretrained
+[rank0]:     tokenizer = cls(*init_inputs, **init_kwargs)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/transformers/models/t5/tokenization_t5.py", line 150, in __init__
+[rank0]:     self.sp_model.Load(vocab_file)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/sentencepiece/__init__.py", line 961, in Load
+[rank0]:     return self.LoadFromFile(model_file)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/sentencepiece/__init__.py", line 316, in LoadFromFile
+[rank0]:     return _sentencepiece.SentencePieceProcessor_LoadFromFile(self, arg)
+[rank0]: TypeError: not a string
+[rank0]:[W1120 13:58:26.622518205 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W1120 13:58:28.634912 357075 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 357891 closing signal SIGTERM
+W1120 13:58:28.639380 357075 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 357892 closing signal SIGTERM
+W1120 13:58:28.640373 357075 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 357893 closing signal SIGTERM
+E1120 13:58:28.969808 357075 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 357890) of binary: /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/python
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1159, in launch_command
+    multi_gpu_launcher(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 793, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_flux_deepspeed_controlnet.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-11-20_13:58:28
+  host      : SH-IDC1-10-140-0-145
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 357890)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: SH-IDC1-10-140-0-145: task 0: Exited with exit code 1

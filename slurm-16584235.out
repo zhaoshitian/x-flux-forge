@@ -1,0 +1,433 @@
+[2024-11-20 20:32:13,417] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+df: ‘/mnt/petrelfs/zhaoshitian/.triton/autotune’: No such file or directory
+W1120 20:32:15.579807 112490 site-packages/torch/distributed/run.py:793] 
+W1120 20:32:15.579807 112490 site-packages/torch/distributed/run.py:793] *****************************************
+W1120 20:32:15.579807 112490 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1120 20:32:15.579807 112490 site-packages/torch/distributed/run.py:793] *****************************************
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/utils/dataclasses.py:1183: UserWarning: DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.
+  warnings.warn("DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/utils/dataclasses.py:1183: UserWarning: DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.
+  warnings.warn("DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/utils/dataclasses.py:1183: UserWarning: DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.
+  warnings.warn("DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/utils/dataclasses.py:1183: UserWarning: DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.
+  warnings.warn("DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/utils/dataclasses.py:1183: UserWarning: DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.
+  warnings.warn("DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/utils/dataclasses.py:1183: UserWarning: DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.
+  warnings.warn("DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/utils/dataclasses.py:1183: UserWarning: DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.
+  warnings.warn("DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/utils/dataclasses.py:1183: UserWarning: DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.
+  warnings.warn("DeepSpeed Zero3 Init flag is only applicable for ZeRO Stage 3. Setting it to False.")
+[2024-11-20 20:32:28,769] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-20 20:32:28,769] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-20 20:32:28,769] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-20 20:32:28,774] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-20 20:32:28,778] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-20 20:32:28,779] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-20 20:32:28,779] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-20 20:32:28,780] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-20 20:32:30,887] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-20 20:32:30,888] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-20 20:32:30,888] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-20 20:32:30,888] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-20 20:32:30,888] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2024-11-20 20:32:30,890] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-20 20:32:30,890] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-20 20:32:30,890] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-20 20:32:30,890] [INFO] [comm.py:652:init_distributed] cdb=None
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+11/20/2024 20:32:31 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 8
+Process index: 0
+Local process index: 0
+Device: cuda:0
+
+Mixed precision type: bf16
+ds_config: {'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'gradient_accumulation_steps': 2, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'nvme_path': None}, 'offload_param': {'device': 'cpu', 'nvme_path': None}, 'stage3_gather_16bit_weights_on_model_save': False}, 'gradient_clipping': 'auto', 'steps_per_print': inf, 'bf16': {'enabled': True}, 'fp16': {'enabled': False}}
+
+DEVICE cuda:0
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 20:32:31 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 8
+Process index: 5
+Local process index: 5
+Device: cuda:5
+
+Mixed precision type: bf16
+ds_config: {'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'gradient_accumulation_steps': 2, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'nvme_path': None}, 'offload_param': {'device': 'cpu', 'nvme_path': None}, 'stage3_gather_16bit_weights_on_model_save': False}, 'gradient_clipping': 'auto', 'steps_per_print': inf, 'bf16': {'enabled': True}, 'fp16': {'enabled': False}}
+
+11/20/2024 20:32:31 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 8
+Process index: 1
+Local process index: 1
+Device: cuda:1
+
+Mixed precision type: bf16
+ds_config: {'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'gradient_accumulation_steps': 2, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'nvme_path': None}, 'offload_param': {'device': 'cpu', 'nvme_path': None}, 'stage3_gather_16bit_weights_on_model_save': False}, 'gradient_clipping': 'auto', 'steps_per_print': inf, 'bf16': {'enabled': True}, 'fp16': {'enabled': False}}
+
+DEVICE cuda:5
+11/20/2024 20:32:31 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 8
+Process index: 7
+Local process index: 7
+Device: cuda:7
+
+Mixed precision type: bf16
+ds_config: {'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'gradient_accumulation_steps': 2, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'nvme_path': None}, 'offload_param': {'device': 'cpu', 'nvme_path': None}, 'stage3_gather_16bit_weights_on_model_save': False}, 'gradient_clipping': 'auto', 'steps_per_print': inf, 'bf16': {'enabled': True}, 'fp16': {'enabled': False}}
+
+DEVICE cuda:1
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+DEVICE cuda:7
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 20:32:31 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 8
+Process index: 4
+Local process index: 4
+Device: cuda:4
+
+Mixed precision type: bf16
+ds_config: {'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'gradient_accumulation_steps': 2, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'nvme_path': None}, 'offload_param': {'device': 'cpu', 'nvme_path': None}, 'stage3_gather_16bit_weights_on_model_save': False}, 'gradient_clipping': 'auto', 'steps_per_print': inf, 'bf16': {'enabled': True}, 'fp16': {'enabled': False}}
+
+DEVICE cuda:4
+11/20/2024 20:32:31 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 8
+Process index: 2
+Local process index: 2
+Device: cuda:2
+
+Mixed precision type: bf16
+ds_config: {'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'gradient_accumulation_steps': 2, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'nvme_path': None}, 'offload_param': {'device': 'cpu', 'nvme_path': None}, 'stage3_gather_16bit_weights_on_model_save': False}, 'gradient_clipping': 'auto', 'steps_per_print': inf, 'bf16': {'enabled': True}, 'fp16': {'enabled': False}}
+
+DEVICE cuda:2
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py:443: UserWarning: `log_with=wandb` was passed but no supported trackers are currently installed.
+  warnings.warn(f"`log_with={log_with}` was passed but no supported trackers are currently installed.")
+11/20/2024 20:32:31 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 8
+Process index: 3
+Local process index: 3
+Device: cuda:3
+
+Mixed precision type: bf16
+ds_config: {'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'gradient_accumulation_steps': 2, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'nvme_path': None}, 'offload_param': {'device': 'cpu', 'nvme_path': None}, 'stage3_gather_16bit_weights_on_model_save': False}, 'gradient_clipping': 'auto', 'steps_per_print': inf, 'bf16': {'enabled': True}, 'fp16': {'enabled': False}}
+
+11/20/2024 20:32:31 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 8
+Process index: 6
+Local process index: 6
+Device: cuda:6
+
+Mixed precision type: bf16
+ds_config: {'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'gradient_accumulation_steps': 2, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'cpu', 'nvme_path': None}, 'offload_param': {'device': 'cpu', 'nvme_path': None}, 'stage3_gather_16bit_weights_on_model_save': False}, 'gradient_clipping': 'auto', 'steps_per_print': inf, 'bf16': {'enabled': True}, 'fp16': {'enabled': False}}
+
+DEVICE cuda:3
+DEVICE cuda:6
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.26s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.33s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.48s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.35s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.28s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.34s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.34s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.35s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.65s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.60s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.69s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.64s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.67s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.61s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.70s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.64s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.70s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.65s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.70s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.64s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.77s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.73s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.68s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.62s/it]
+Init model
+Init model
+Init model
+Init model
+Init model
+Init model
+Init model
+Init model
+Loading checkpoint
+Loading checkpoint
+Loading checkpoint
+Loading checkpoint
+Loading checkpoint
+Loading checkpoint
+Loading checkpoint
+Loading checkpoint
+Init AE
+Init AE
+Init AE
+Init AE
+Init AE
+Init AE
+Init AE
+Init AE
+743.80728 parameters
+743.80728 parameters
+743.80728 parameters
+743.80728 parameters
+743.80728 parameters
+743.80728 parameters
+743.80728 parameters
+743.80728 parameters
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank3]:     main()
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 145, in main
+[rank3]:     controlnet, optimizer, _, lr_scheduler = accelerator.prepare(
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1323, in prepare
+[rank3]:     result = self._prepare_deepspeed(*args)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1836, in _prepare_deepspeed
+[rank3]:     optimizer = DeepSpeedCPUAdam(optimizer.param_groups, **defaults)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+[rank3]:     self.ds_opt_adam = CPUAdamBuilder().load()
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 531, in load
+[rank3]:     return self.jit_load(verbose)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 563, in jit_load
+[rank3]:     cxx_args = self.strip_empty_entries(self.cxx_args())
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 842, in cxx_args
+[rank3]:     CUDA_ENABLE = self.is_cuda_enable()
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 420, in is_cuda_enable
+[rank3]:     assert_no_cuda_mismatch(self.name)
+[rank3]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 102, in assert_no_cuda_mismatch
+[rank3]:     raise CUDAMismatchException(
+[rank3]: deepspeed.ops.op_builder.builder.CUDAMismatchException: >- DeepSpeed Op Builder: Installed CUDA version 11.8 does not match the version torch was compiled with 12.4, unable to compile cuda/cpp extensions without a matching cuda version.
+Exception ignored in: <function DeepSpeedCPUAdam.__del__ at 0x7f6b2220f0a0>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 102, in __del__
+    self.ds_opt_adam.destroy_adam(self.opt_id)
+AttributeError: 'DeepSpeedCPUAdam' object has no attribute 'ds_opt_adam'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank0]:     main()
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 145, in main
+[rank0]:     controlnet, optimizer, _, lr_scheduler = accelerator.prepare(
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1323, in prepare
+[rank0]:     result = self._prepare_deepspeed(*args)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1836, in _prepare_deepspeed
+[rank0]:     optimizer = DeepSpeedCPUAdam(optimizer.param_groups, **defaults)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+[rank0]:     self.ds_opt_adam = CPUAdamBuilder().load()
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 531, in load
+[rank0]:     return self.jit_load(verbose)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 563, in jit_load
+[rank0]:     cxx_args = self.strip_empty_entries(self.cxx_args())
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 842, in cxx_args
+[rank0]:     CUDA_ENABLE = self.is_cuda_enable()
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 420, in is_cuda_enable
+[rank0]:     assert_no_cuda_mismatch(self.name)
+[rank0]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 102, in assert_no_cuda_mismatch
+[rank0]:     raise CUDAMismatchException(
+[rank0]: deepspeed.ops.op_builder.builder.CUDAMismatchException: >- DeepSpeed Op Builder: Installed CUDA version 11.8 does not match the version torch was compiled with 12.4, unable to compile cuda/cpp extensions without a matching cuda version.
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank1]:     main()
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 145, in main
+[rank1]:     controlnet, optimizer, _, lr_scheduler = accelerator.prepare(
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1323, in prepare
+[rank1]:     result = self._prepare_deepspeed(*args)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1836, in _prepare_deepspeed
+[rank1]:     optimizer = DeepSpeedCPUAdam(optimizer.param_groups, **defaults)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+[rank1]:     self.ds_opt_adam = CPUAdamBuilder().load()
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 531, in load
+[rank1]:     return self.jit_load(verbose)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 563, in jit_load
+[rank1]:     cxx_args = self.strip_empty_entries(self.cxx_args())
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 842, in cxx_args
+[rank1]:     CUDA_ENABLE = self.is_cuda_enable()
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 420, in is_cuda_enable
+[rank1]:     assert_no_cuda_mismatch(self.name)
+[rank1]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 102, in assert_no_cuda_mismatch
+[rank1]:     raise CUDAMismatchException(
+[rank1]: deepspeed.ops.op_builder.builder.CUDAMismatchException: >- DeepSpeed Op Builder: Installed CUDA version 11.8 does not match the version torch was compiled with 12.4, unable to compile cuda/cpp extensions without a matching cuda version.
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank2]:     main()
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 145, in main
+[rank2]:     controlnet, optimizer, _, lr_scheduler = accelerator.prepare(
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1323, in prepare
+[rank2]:     result = self._prepare_deepspeed(*args)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1836, in _prepare_deepspeed
+[rank2]:     optimizer = DeepSpeedCPUAdam(optimizer.param_groups, **defaults)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+[rank2]:     self.ds_opt_adam = CPUAdamBuilder().load()
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 531, in load
+[rank2]:     return self.jit_load(verbose)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 563, in jit_load
+[rank2]:     cxx_args = self.strip_empty_entries(self.cxx_args())
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 842, in cxx_args
+[rank2]:     CUDA_ENABLE = self.is_cuda_enable()
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 420, in is_cuda_enable
+[rank2]:     assert_no_cuda_mismatch(self.name)
+[rank2]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 102, in assert_no_cuda_mismatch
+[rank2]:     raise CUDAMismatchException(
+[rank2]: deepspeed.ops.op_builder.builder.CUDAMismatchException: >- DeepSpeed Op Builder: Installed CUDA version 11.8 does not match the version torch was compiled with 12.4, unable to compile cuda/cpp extensions without a matching cuda version.
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank7]:     main()
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 145, in main
+[rank7]:     controlnet, optimizer, _, lr_scheduler = accelerator.prepare(
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1323, in prepare
+[rank7]:     result = self._prepare_deepspeed(*args)
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1836, in _prepare_deepspeed
+[rank7]:     optimizer = DeepSpeedCPUAdam(optimizer.param_groups, **defaults)
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+[rank7]:     self.ds_opt_adam = CPUAdamBuilder().load()
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 531, in load
+[rank7]:     return self.jit_load(verbose)
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 563, in jit_load
+[rank7]:     cxx_args = self.strip_empty_entries(self.cxx_args())
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 842, in cxx_args
+[rank7]:     CUDA_ENABLE = self.is_cuda_enable()
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 420, in is_cuda_enable
+[rank7]:     assert_no_cuda_mismatch(self.name)
+[rank7]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 102, in assert_no_cuda_mismatch
+[rank7]:     raise CUDAMismatchException(
+[rank7]: deepspeed.ops.op_builder.builder.CUDAMismatchException: >- DeepSpeed Op Builder: Installed CUDA version 11.8 does not match the version torch was compiled with 12.4, unable to compile cuda/cpp extensions without a matching cuda version.
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank6]:     main()
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 145, in main
+[rank6]:     controlnet, optimizer, _, lr_scheduler = accelerator.prepare(
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1323, in prepare
+[rank6]:     result = self._prepare_deepspeed(*args)
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1836, in _prepare_deepspeed
+[rank6]:     optimizer = DeepSpeedCPUAdam(optimizer.param_groups, **defaults)
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+[rank6]:     self.ds_opt_adam = CPUAdamBuilder().load()
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 531, in load
+[rank6]:     return self.jit_load(verbose)
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 563, in jit_load
+[rank6]:     cxx_args = self.strip_empty_entries(self.cxx_args())
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 842, in cxx_args
+[rank6]:     CUDA_ENABLE = self.is_cuda_enable()
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 420, in is_cuda_enable
+[rank6]:     assert_no_cuda_mismatch(self.name)
+[rank6]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 102, in assert_no_cuda_mismatch
+[rank6]:     raise CUDAMismatchException(
+[rank6]: deepspeed.ops.op_builder.builder.CUDAMismatchException: >- DeepSpeed Op Builder: Installed CUDA version 11.8 does not match the version torch was compiled with 12.4, unable to compile cuda/cpp extensions without a matching cuda version.
+Exception ignored in: <function DeepSpeedCPUAdam.__del__ at 0x7f4164b2b0a0>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 102, in __del__
+    self.ds_opt_adam.destroy_adam(self.opt_id)
+AttributeError: 'DeepSpeedCPUAdam' object has no attribute 'ds_opt_adam'
+Exception ignored in: <function DeepSpeedCPUAdam.__del__ at 0x7f541f8b30a0>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 102, in __del__
+    self.ds_opt_adam.destroy_adam(self.opt_id)
+AttributeError: 'DeepSpeedCPUAdam' object has no attribute 'ds_opt_adam'
+Exception ignored in: <function DeepSpeedCPUAdam.__del__ at 0x7f4c051770a0>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 102, in __del__
+    self.ds_opt_adam.destroy_adam(self.opt_id)
+AttributeError: 'DeepSpeedCPUAdam' object has no attribute 'ds_opt_adam'
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank4]:     main()
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 145, in main
+[rank4]:     controlnet, optimizer, _, lr_scheduler = accelerator.prepare(
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1323, in prepare
+[rank4]:     result = self._prepare_deepspeed(*args)
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1836, in _prepare_deepspeed
+[rank4]:     optimizer = DeepSpeedCPUAdam(optimizer.param_groups, **defaults)
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+[rank4]:     self.ds_opt_adam = CPUAdamBuilder().load()
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 531, in load
+[rank4]:     return self.jit_load(verbose)
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 563, in jit_load
+[rank4]:     cxx_args = self.strip_empty_entries(self.cxx_args())
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 842, in cxx_args
+[rank4]:     CUDA_ENABLE = self.is_cuda_enable()
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 420, in is_cuda_enable
+[rank4]:     assert_no_cuda_mismatch(self.name)
+[rank4]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 102, in assert_no_cuda_mismatch
+[rank4]:     raise CUDAMismatchException(
+[rank4]: deepspeed.ops.op_builder.builder.CUDAMismatchException: >- DeepSpeed Op Builder: Installed CUDA version 11.8 does not match the version torch was compiled with 12.4, unable to compile cuda/cpp extensions without a matching cuda version.
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 318, in <module>
+[rank5]:     main()
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/x-flux-forge/train_flux_deepspeed_controlnet.py", line 145, in main
+[rank5]:     controlnet, optimizer, _, lr_scheduler = accelerator.prepare(
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1323, in prepare
+[rank5]:     result = self._prepare_deepspeed(*args)
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/accelerator.py", line 1836, in _prepare_deepspeed
+[rank5]:     optimizer = DeepSpeedCPUAdam(optimizer.param_groups, **defaults)
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 94, in __init__
+[rank5]:     self.ds_opt_adam = CPUAdamBuilder().load()
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 531, in load
+[rank5]:     return self.jit_load(verbose)
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 563, in jit_load
+[rank5]:     cxx_args = self.strip_empty_entries(self.cxx_args())
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 842, in cxx_args
+[rank5]:     CUDA_ENABLE = self.is_cuda_enable()
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 420, in is_cuda_enable
+[rank5]:     assert_no_cuda_mismatch(self.name)
+[rank5]:   File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/op_builder/builder.py", line 102, in assert_no_cuda_mismatch
+[rank5]:     raise CUDAMismatchException(
+[rank5]: deepspeed.ops.op_builder.builder.CUDAMismatchException: >- DeepSpeed Op Builder: Installed CUDA version 11.8 does not match the version torch was compiled with 12.4, unable to compile cuda/cpp extensions without a matching cuda version.
+Exception ignored in: <function DeepSpeedCPUAdam.__del__ at 0x7f9ac24130a0>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 102, in __del__
+    self.ds_opt_adam.destroy_adam(self.opt_id)
+AttributeError: 'DeepSpeedCPUAdam' object has no attribute 'ds_opt_adam'
+Exception ignored in: <function DeepSpeedCPUAdam.__del__ at 0x7f1de2d9b0a0>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 102, in __del__
+    self.ds_opt_adam.destroy_adam(self.opt_id)
+AttributeError: 'DeepSpeedCPUAdam' object has no attribute 'ds_opt_adam'
+[rank0]:[W1120 20:33:12.738512516 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+Exception ignored in: <function DeepSpeedCPUAdam.__del__ at 0x7ff2e3bc30a0>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 102, in __del__
+    self.ds_opt_adam.destroy_adam(self.opt_id)
+AttributeError: 'DeepSpeedCPUAdam' object has no attribute 'ds_opt_adam'
+Exception ignored in: <function DeepSpeedCPUAdam.__del__ at 0x7f71253bb0a0>
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/deepspeed/ops/adam/cpu_adam.py", line 102, in __del__
+    self.ds_opt_adam.destroy_adam(self.opt_id)
+AttributeError: 'DeepSpeedCPUAdam' object has no attribute 'ds_opt_adam'
+W1120 20:33:12.228426 112490 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 113104 closing signal SIGTERM
+W1120 20:33:12.230126 112490 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 113105 closing signal SIGTERM
+W1120 20:33:12.231953 112490 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 113106 closing signal SIGTERM
+W1120 20:33:12.233728 112490 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 113108 closing signal SIGTERM
+W1120 20:33:12.235029 112490 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 113109 closing signal SIGTERM
+W1120 20:33:12.236263 112490 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 113110 closing signal SIGTERM
+W1120 20:33:12.237488 112490 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 113111 closing signal SIGTERM
+E1120 20:33:12.893495 112490 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 3 (pid: 113107) of binary: /mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/python
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1153, in launch_command
+    deepspeed_launcher(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/accelerate/commands/launch.py", line 846, in deepspeed_launcher
+    distrib_run.run(args)
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/mnt/petrelfs/zhaoshitian/anaconda3/envs/xlab/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_flux_deepspeed_controlnet.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-11-20_20:33:12
+  host      : SH-IDC1-10-140-0-137
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 113107)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: SH-IDC1-10-140-0-137: task 0: Exited with exit code 1
